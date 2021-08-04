@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap");
 :root {
-  --primary-color:#721616;
+  --primary-color:#142c95;
 }
 
 body {
@@ -125,5 +125,23 @@ ul.features-list li:before {
 
 .features-section img {
   display: none;
+}
+
+.testimonails-section {
+  background: var(--primary-color);
+}
+
+.testimonails-section li {
+  background: #006BD6;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+
+.testimonails-section li img {
+  width: 5em;
+  height: 5em;
 }
 /*# sourceMappingURL=main.css.map */
