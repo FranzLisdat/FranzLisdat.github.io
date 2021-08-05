@@ -206,5 +206,19 @@ nav ul.primary-nav {
 nav li a {
   color: white;
   text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: .5em;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
