@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franz Lisdat</title>
-    <link rel="stylesheet" href="css/agent.css">
+    <link rel="stylesheet" href="css/agent-optionen.css">
 </head>
 <body>
     <div class="navbar">
@@ -17,7 +17,7 @@
             <nav>
                 <img src="images/exit.svg" id="mobile-exit" class="mobile-menu-exit" alt="exit-navigation">
                 <ul class="primary-nav">
-                    <li class="current"><a href="#">Home</a></li>
+                    <li class="current"><a href="/index.html">Home</a></li>
                     <li><a href="/agent.html">Agent</a></li>
                     <li><a href="/index.html">Kontakt</a></li>
                 </ul>
@@ -30,8 +30,19 @@
     </div>
 
     <section class="hero">
-        <h1>Spieleranzahl</h1>
-        <button class="start-button">Bestätigen</button>
+        <h1>Spieleranzahl max. 12</h1>
+        <form class="anzahl-spieler" action="agent-start.html">
+            <ul>  
+                <li>
+                    <div class="slidecontainer">
+                    <p><span id="demo"></span></p>
+                    <input type="range" min="3" max="12" value="3" class="slider" id="myRange">
+                    <input type="submit" value="Click" onclick="passValues()"/>
+                  </div>
+                </li>
+                <!-- <li> <button class= "bestätigen-button" >Bestätigen</button></li> -->
+            </ul>
+        </form>
     </section>
 
   
@@ -39,6 +50,26 @@
 
 
     <script>
+
+        function passValues() 
+        {
+            // var firstname = document.getElementById("txt").value;
+            // localStorage.setItem("textvalue",firstname);
+            // return false;
+
+            var anzahlDerSpieler = document.getElementById("myRange").value;
+            localStorage.setItem("numberValue",anzahlDerSpieler);
+            return false;
+
+        }
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+
         const mobileBtn = document.getElementById("mobile-cta");
         nav = document.querySelector("nav"); // does the same but without the ID
         mobileBtnExit = document.getElementById("mobile-exit");
