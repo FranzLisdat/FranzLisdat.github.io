@@ -22,8 +22,8 @@
                     <li><a href="#">Kontakt</a></li>
                 </ul>
                 <ul class="secondary-nav">
-                    <li><a href="#">Deutsch/Englisch</a></li>
-                    <li><a href="#">Light/DarkMode?</a></li>
+                    <li><a href="#">DE/EN</a></li>
+                    <li class="lightdark"><a href="#">Light/DarkMode?</a></li>
                 </ul>
             </nav>
         </div>
@@ -102,10 +102,14 @@
     <script>
         const mobileBtn = document.getElementById("mobile-cta");
         nav = document.querySelector("nav"); // does the same but without the ID
-        mobileBtnEcit = document.getElementById("mobile-exit");
+        mobileBtnExit = document.getElementById("mobile-exit");
         
         mobileBtn.addEventListener("click", () => {
             nav.classList.add("menu-btn");
+        })
+
+        mobileBtnExit.addEventListener("click", () => {
+            nav.classList.remove("menu-btn");
         })
         
     </script>

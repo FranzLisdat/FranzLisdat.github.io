@@ -23,7 +23,7 @@ body{
         color: var(--primary-color);
     }
     nav {
-       // display:none;
+        display:none;
     }
     
     .container {
@@ -223,4 +223,80 @@ nav {
     float:right;
     margin: .5em;
     cursor:pointer;
+}
+
+// ab 768px (Tablet size)
+@media only screen and (min-width: 768px) {
+
+    .mobile-menu, .mobile-menu-exit{
+        display:none;
+    }
+
+    .navbar .container {
+        display:grid;
+        grid-template-columns: 180px auto;
+        
+
+    }
+
+    .navbar nav {
+    display:flex;
+    justify-content: space-between;
+    background:none;
+    position:unset;
+    height:auto;
+    width: 100%;
+    padding:0;
+
+        ul {
+        display:flex; 
+        }
+    
+        a {
+            color:black;
+            padding: .1em 1em;
+            font-size: 1em;
+        }
+
+        ul.primary-nav {
+            margin:0;
+        }
+
+        li.current a {
+            font-weight:bold;
+        }
+
+        li.lightdark a {
+            color: var(--primary-color);
+            border: 3px solid var(--primary-color);
+            font-weight:bold;
+            border-radius: 5em;
+            margin-top: -.2em;
+
+            &:hover {
+                background:var(--primary-color);
+                color: white;
+            }
+        }
+        
+    }
+}
+
+// PC size
+@media only screen and (min-width: 1080px) {
+
+    .container {
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 10em 4em;
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content:space-between;
+        text-align: left;
+    }
 }
