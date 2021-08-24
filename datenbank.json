@@ -1,0 +1,64 @@
+{
+    "ort": [
+        {
+            "supermarkt":{
+                "personen":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Verkäufer an der Kasse"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"langsame Oma"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"junges Mädchen"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Schichtleiter"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Einpacker"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Verkäufer am Backstand"
+                    }
+                ]
+            }
+        }, 
+        {
+            "Hogwarts": {
+                "personen":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Harry Potter"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Hermine Granger"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Ron Weasley"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Albus Dumbledore"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Lord Voldemort"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Severus Snape"
+                    }
+                ]
+            }
+        }
+    ]
+}
