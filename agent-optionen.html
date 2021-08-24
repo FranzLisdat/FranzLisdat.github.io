@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franz Lisdat</title>
+    <link rel="stylesheet" href="css/agent.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Franz <span>Lisdat</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="open-navigation">
+          
+            <nav>
+                <img src="images/exit.svg" id="mobile-exit" class="mobile-menu-exit" alt="exit-navigation">
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="/agent.html">Agent</a></li>
+                    <li><a href="/index.html">Kontakt</a></li>
+                </ul>
+                <ul class="secondary-nav">
+                    <li><a href="index.html">DE/EN</a></li>
+                    <li class="lightdark"><a href="index.html">Light/DarkMode</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>Spieleranzahl</h1>
+        <button class="start-button">Bestätigen</button>
+    </section>
+
+  
+    
+
+
+    <script>
+        const mobileBtn = document.getElementById("mobile-cta");
+        nav = document.querySelector("nav"); // does the same but without the ID
+        mobileBtnExit = document.getElementById("mobile-exit");
+        
+        mobileBtn.addEventListener("click", () => {
+            nav.classList.add("menu-btn");
+        })
+
+        mobileBtnExit.addEventListener("click", () => {
+            nav.classList.remove("menu-btn");
+        })
+        
+    </script>
+</body>
+
+</html>
