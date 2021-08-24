@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap");
 :root {
   --primary-color:#142c95;
@@ -70,28 +71,22 @@ section {
   cursor: pointer;
 }
 
-.hero .start-button {
+.hero .bestätigen-button {
   background-color: #020285;
   font-size: 300%;
-}
-
-.hero .ideen-button {
-  background-color: #b6b6c9;
-  font-size: 200%;
 }
 
 .hero li {
   padding: 2em;
 }
 
-section.features-section {
-  background: #120d38;
-  color: white;
+.hero p {
+  font-size: 3em;
+  font-weight: bold;
 }
 
-.testimonails-section {
-  background: var(--primary-color);
-  color: white;
+.hero .slider {
+  width: 50%;
 }
 
 nav.menu-btn {
@@ -216,8 +211,4 @@ nav li a:hover {
     margin-right: 8em;
   }
 }
-
-.anzahl-spieler {
-  text-align: center;
-}
-/*# sourceMappingURL=agent.css.map */
+/*# sourceMappingURL=agent-optionen.css.map */

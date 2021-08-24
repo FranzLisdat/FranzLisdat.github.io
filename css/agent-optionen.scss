@@ -52,7 +52,7 @@ section {
 
 .hero {
     text-align: center;
-    
+
     span {
         color:rgb(94, 94, 94);
         font-size:60%;
@@ -65,32 +65,32 @@ section {
         padding: 1em 2em 1em 2em;
         cursor: pointer;
     }
-    .start-button {
+    .bestätigen-button {
         background-color: rgb(2, 2, 133);
         font-size: 300%;
     }
-    .ideen-button {
-        background-color: rgb(182, 182, 201);
-        font-size: 200%;
-    }
+
     li {
         padding: 2em;
     }
+
+    .slidecontainer {
+  
+    }
+    p {
+        font-size: 3em;
+        font-weight:bold;
+    }
+    .slider {
+        width: 50%;
+    }
 }
 
 
-section.features-section {
-    background: #120d38;
-    color: white;
-}
 
 
-.testimonails-section  {
-    background: var(--primary-color);
-    color: white;
 
 
-}
 
 nav.menu-btn {
     display:block;
@@ -229,6 +229,3 @@ nav {
     }
 }
 
-.anzahl-spieler {
-    text-align: center;
-}
