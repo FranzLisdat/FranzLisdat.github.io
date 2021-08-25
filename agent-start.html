@@ -32,7 +32,7 @@
     </div>
 
     <section class="hero">
-        <h1>Hello</h1>
+        <h1>Start!</h1>
  
             <p>
             <span id="result"></span>
@@ -42,22 +42,20 @@
     <div class="wrapper">
         <div class="profile">
            <table id= "userdata" border="2">
-        
-        
               <tbody>
         
-               </tbody>
+              </tbody>
            </table>
-        
         </div>
-        </div>
+    </div>
   
     
 
 
     <script>
 
-        document.getElementById("result").innerHTML=localStorage.getItem("numberValue");
+        var Spieleranzahl = localStorage.getItem("numberValue");
+        document.getElementById("result").innerHTML = Spieleranzahl;
 
         const mobileBtn = document.getElementById("mobile-cta");
         nav = document.querySelector("nav"); // does the same but without the ID
@@ -79,21 +77,21 @@
                 var personen = data["ort"][randomNumber][spielOrtString];
 
                 console.log("Random Nummer ist: " + randomNumber + " | Der Ort ist: " + spielOrtString);
-                console.log(personen["person"][0].bezeichnung);
+                //console.log(personen["person"][0].bezeichnung);
 
-                console.log(personen.person.length);
-                for (let i = 0; i<personen.person.length;i++){
-                    var tblRow = "<tr>" + "<td>" + personen.person[i].bezeichnung + "</td>" + "</tr>"
-                     // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-                     $(tblRow).appendTo("#userdata tbody");
+                //console.log(personen.person.length);
+                console.log("Spieleranzahl ist: " + Spieleranzahl);
+                for (let i = 0; i<Spieleranzahl-1;i++){
+                    var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
+                    console.log("Person Nr: " + (i+1) + " Zufällige Zahl ist: " + randomNumberFuerPerson);
+                    var bezeichnung = personen.person[randomNumberFuerPerson].bezeichnung;
+                    console.log(bezeichnung);
+                    personen.person.splice(randomNumberFuerPerson,1);
+                    //console.log("Verbleibende im Array sind: " + personen.person.length);
+                    var tblRow = "<tr>" + "<td>" + "Rolle: " + bezeichnung + "</td>" + "</tr>" + $(tblRow).appendTo("#userdata tbody");
+ 
                 //console.log(personen.person[i].bezeichnung); 
                }
-
-            //     $.each(randomPlace, function(i, f) {
-            //         var tblRow = "<tr>" + "<td>" + f.people + "</td>" + "</tr>"
-            //         // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-            //         $(tblRow).appendTo("#userdata tbody");
-            //     });
              });
 
         });

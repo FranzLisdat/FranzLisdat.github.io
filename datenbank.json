@@ -1,33 +1,59 @@
 {
     "ort": [
         {
-            "supermarkt": 
+            "zoo": 
                 {
                 "person":[
                     {
                         "id":0,
-                        "bezeichnung":"Verkäufer an der Kasse"
+                        "bezeichnung":"Tierpfleger - Futtermeister"
                     },
                     {
                         "id":1,
-                        "bezeichnung":"langsame Oma"
+                        "bezeichnung":"Tiermediziner"
                     },
                     {
                         "id":2,
-                        "bezeichnung":"junges Mädchen"
+                        "bezeichnung":"Besucher: Mutter mit Kind"
                     },
                     {
                         "id":3,
-                        "bezeichnung":"Schichtleiter"
+                        "bezeichnung":"Affe"
                     },
                     {
                         "id":4,
-                        "bezeichnung":"Einpacker"
+                        "bezeichnung":"Züchter"
                     },
                     {
                         "id":5,
-                        "bezeichnung":"Verkäufer am Backstand"
+                        "bezeichnung":"Gehegereiniger"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Eisbär"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Elefant"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Ticketverkäufer"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Parkreiniger"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Giraffe"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Ziege"
                     }
+
+
                 ]
             }
         

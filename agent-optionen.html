@@ -30,13 +30,13 @@
     </div>
 
     <section class="hero">
-        <h1>Spieleranzahl max. 12</h1>
+        <h1>Spieleranzahl max. 13</h1>
         <form class="anzahl-spieler" action="agent-start.html">
             <ul>  
                 <li>
                     <div class="slidecontainer">
                     <p><span id="demo"></span></p>
-                    <input type="range" min="3" max="12" value="3" class="slider" id="myRange">
+                    <input type="range" min="3" max="13" value="3" class="slider" id="myRange">
                     <input type="submit" value="Click" onclick="passValues()"/>
                   </div>
                 </li>
@@ -45,7 +45,11 @@
         </form>
     </section>
 
-  
+    <table>
+        <tr>
+            <td>test</td>
+        </tr>
+    </table>
     
 
 
@@ -53,9 +57,6 @@
 
         function passValues() 
         {
-            // var firstname = document.getElementById("txt").value;
-            // localStorage.setItem("textvalue",firstname);
-            // return false;
 
             var anzahlDerSpieler = document.getElementById("myRange").value;
             localStorage.setItem("numberValue",anzahlDerSpieler);
