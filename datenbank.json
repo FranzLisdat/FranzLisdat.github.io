@@ -1,8 +1,9 @@
 {
     "ort": [
         {
-            "supermarkt":{
-                "personen":[
+            "supermarkt": 
+                {
+                "person":[
                     {
                         "id":0,
                         "bezeichnung":"Verkäufer an der Kasse"
@@ -29,10 +30,11 @@
                     }
                 ]
             }
+        
         }, 
         {
             "Hogwarts": {
-                "personen":[
+                "person":[
                     {
                         "id":0,
                         "bezeichnung":"Harry Potter"
@@ -55,7 +57,31 @@
                     },
                     {
                         "id":5,
-                        "bezeichnung":"Severus Snape"
+                        "bezeichnung":"Draco Malfoy"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Rubeus Hagrid"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Luna Lovegood"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Dobby, der Hauself"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Neville Longbottom"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Sirius Black"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Minerva McGonagall"
                     }
                 ]
             }

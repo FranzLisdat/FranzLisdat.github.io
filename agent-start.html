@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franz Lisdat</title>
     <link rel="stylesheet" href="css/agent-optionen.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
 </head>
 <body>
     <div class="navbar">
@@ -37,6 +39,18 @@
             </p>
     </section>
 
+    <div class="wrapper">
+        <div class="profile">
+           <table id= "userdata" border="2">
+        
+        
+              <tbody>
+        
+               </tbody>
+           </table>
+        
+        </div>
+        </div>
   
     
 
@@ -57,6 +71,32 @@
             nav.classList.remove("menu-btn");
         })
         
+        $(function() {
+        var people = [];
+            $.getJSON('datenbank.json', function(data) {
+                var randomNumber = Math.floor(Math.random() * data.ort.length);
+                var spielOrtString = Object.keys(data.ort[randomNumber]);
+                var personen = data["ort"][randomNumber][spielOrtString];
+
+                console.log("Random Nummer ist: " + randomNumber + " | Der Ort ist: " + spielOrtString);
+                console.log(personen["person"][0].bezeichnung);
+
+                console.log(personen.person.length);
+                for (let i = 0; i<personen.person.length;i++){
+                    var tblRow = "<tr>" + "<td>" + personen.person[i].bezeichnung + "</td>" + "</tr>"
+                     // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+                     $(tblRow).appendTo("#userdata tbody");
+                //console.log(personen.person[i].bezeichnung); 
+               }
+
+            //     $.each(randomPlace, function(i, f) {
+            //         var tblRow = "<tr>" + "<td>" + f.people + "</td>" + "</tr>"
+            //         // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+            //         $(tblRow).appendTo("#userdata tbody");
+            //     });
+             });
+
+        });
     </script>
 </body>
 
