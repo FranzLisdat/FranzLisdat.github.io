@@ -39,23 +39,56 @@
             </p>
     </section>
 
-    <div class="wrapper">
-        <div class="profile">
-           <table id= "userdata" border="2">
-              <tbody>
-        
-              </tbody>
-           </table>
+    <div class="wrapper" id="wrapperId">
+        <div class="profile" id="profileId">
+            <div id= "userdata" border="2">
+                <ul>
+                    <li>Ort : <span id="spiel-ort"></span></li>
+                    <li>Rolle : <span id="textfeld"></span></li> 
+                </ul>
+            </div>
+            <button type="button" id="weiter-button" class="weiter-button" value="Click" onclick="weiterFunktion()">Weiter</button></li>
         </div>
+        <button type="button" id="start-button" class="start-button" value="Click" onclick="startFunktion()">Start!</button></li>
     </div>
   
+        <div class="countDown">
+            <p id="demo"></p>
+        </div>
+
     
-
-
     <script>
+
+        function timer(){
+        // Zeit für das Spiel in Minuten
+            var zeitBisZumEndeDesSpiels = 8;
+            var now = new Date().getTime();
+
+            var countDownDate = now + (8*1003*60);
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+                
+            // Find the distance between now and the count down date
+            now = new Date().getTime();
+            var distance = countDownDate - now;
+            // Time calculations minutes and seconds
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+                
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        }
 
         var Spieleranzahl = localStorage.getItem("numberValue");
         document.getElementById("result").innerHTML = Spieleranzahl;
+
 
         const mobileBtn = document.getElementById("mobile-cta");
         nav = document.querySelector("nav"); // does the same but without the ID
@@ -68,33 +101,64 @@
         mobileBtnExit.addEventListener("click", () => {
             nav.classList.remove("menu-btn");
         })
-        
+        var spielOrtString;
+        var spielOrtStringAbspeicherung = ""; 
+        var personen;
+        var rollenText = "";
+
+        function shuffle(a) {
+            for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+            }
+        return a;
+        }
         $(function() {
-        var people = [];
             $.getJSON('datenbank.json', function(data) {
                 var randomNumber = Math.floor(Math.random() * data.ort.length);
-                var spielOrtString = Object.keys(data.ort[randomNumber]);
-                var personen = data["ort"][randomNumber][spielOrtString];
+                spielOrtString = Object.keys(data.ort[randomNumber]);
+                personen = data["ort"][randomNumber][spielOrtString];
+                shuffle(personen.person);
+                personen.person.splice(0,13-Spieleranzahl);
+                personen.person.push({id:12,bezeichnung:"Agent"});
+                spielOrtStringAbspeicherung = spielOrtString;
+              });
 
-                console.log("Random Nummer ist: " + randomNumber + " | Der Ort ist: " + spielOrtString);
-                //console.log(personen["person"][0].bezeichnung);
+        });
+        
+        var i = 0; 
 
-                //console.log(personen.person.length);
-                console.log("Spieleranzahl ist: " + Spieleranzahl);
-                for (let i = 0; i<Spieleranzahl-1;i++){
+        function weiterFunktion(){
+            console.log("Array length: " + personen.person.length);
+            if (personen.person.length!= 0){
+                if (rollenText === "") {
+                    spielOrtString = spielOrtStringAbspeicherung;
+                    i++;
                     var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
-                    console.log("Person Nr: " + (i+1) + " Zufällige Zahl ist: " + randomNumberFuerPerson);
                     var bezeichnung = personen.person[randomNumberFuerPerson].bezeichnung;
                     console.log(bezeichnung);
                     personen.person.splice(randomNumberFuerPerson,1);
-                    //console.log("Verbleibende im Array sind: " + personen.person.length);
-                    var tblRow = "<tr>" + "<td>" + "Rolle: " + bezeichnung + "</td>" + "</tr>" + $(tblRow).appendTo("#userdata tbody");
- 
-                //console.log(personen.person[i].bezeichnung); 
-               }
-             });
+                    rollenText = bezeichnung;
+                    if (bezeichnung == "Agent"){
+                        spielOrtString = "???";    
+                        }
+                }   else if (rollenText !== ""){
+                        rollenText = "";
+                        spielOrtString = "";
+                    }
+                document.getElementById("textfeld").innerHTML = rollenText;
+                document.getElementById("spiel-ort").innerHTML = spielOrtString;
+            } else {
+                hideText = document.getElementById("profileId");
+                hideText.classList.add("hidden");
+                showText = document.getElementById("start-button");
+                showText.classList.add("visible");
+            }
+        }
+        function startFunktion(){
+        timer();
+        }
 
-        });
     </script>
 </body>
 

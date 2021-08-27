@@ -36,6 +36,42 @@ body{
     }
 }
 
+.countDown {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+
+.hidden {
+    display:none;
+}
+.visible{
+    visibility: visible;
+}
+
+.wrapper {
+    text-align: center;
+    
+    ul {
+        font-weight:bold;
+        font-size:150%;
+    }   
+    button {
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        padding: 1em 2em 1em 2em;
+        cursor: pointer;
+    }
+    .weiter-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+    }
+}
+#start-button{
+    visibility: hidden;
+}
 a {
     color:#949ef8
 }

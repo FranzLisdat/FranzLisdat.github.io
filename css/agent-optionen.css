@@ -40,6 +40,46 @@ body {
   cursor: pointer;
 }
 
+.countDown {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.wrapper ul {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.wrapper button {
+  color: white;
+  border-radius: 1em;
+  font-style: normal;
+  padding: 1em 2em 1em 2em;
+  cursor: pointer;
+}
+
+.wrapper .weiter-button {
+  background-color: #020285;
+  font-size: 300%;
+}
+
+#start-button {
+  visibility: hidden;
+}
+
 a {
   color: #949ef8;
 }
