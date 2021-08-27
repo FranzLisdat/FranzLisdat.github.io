@@ -68,10 +68,12 @@ body{
         background-color: rgb(2, 2, 133);
         font-size: 300%;
     }
-}
-#start-button{
-    visibility: hidden;
-}
+    .start-button{
+        background-color: rgb(139, 139, 139);
+        color: red;
+        font-size: 300%;
+    }
+    }
 a {
     color:#949ef8
 }

@@ -1,46 +1,25 @@
 <html>
 <head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-
-<script>
-            
-
-    $(function() {
-   var people = [];
-   $.getJSON('test.json', function(data) {
-      Object.assign(data){
-         
-      }
-      data.person.add[4] = {"firstName": "Peter",
-            "lastName": "Parker",
-            "job": "Photographer",
-            "roll": 40};
-       $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" + "</tr>"
-          // "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
-
-   });
-
-});
-</script>
 </head>
 
 <body>
+<h1>TEST SEITE</h1>
 
-<div class="wrapper">
-<div class="profile">
-   <table id= "userdata" border="2">
+<p> <span id="spiel-ort"></span> </p>
 
+   
+   <script>
 
-      <tbody>
+   var json;
 
-       </tbody>
-   </table>
+   async function getJSON(){
+   var res = await fetch ('datenbank.json');
+   json = await res.json();
 
-</div>
-</div>
+   }
 
+    getJSON().then(console.log(json));
+   </script>
 </body>
 </html>

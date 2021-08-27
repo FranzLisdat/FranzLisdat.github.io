@@ -32,10 +32,10 @@
     </div>
 
     <section class="hero">
-        <h1>Start!</h1>
- 
+        <h1>Spielstart!</h1>
+            <h3>noch: <span id="result"></span> Rollen zu vergeben!</h3>
             <p>
-            <span id="result"></span>
+            
             </p>
     </section>
 
@@ -49,7 +49,7 @@
             </div>
             <button type="button" id="weiter-button" class="weiter-button" value="Click" onclick="weiterFunktion()">Weiter</button></li>
         </div>
-        <button type="button" id="start-button" class="start-button" value="Click" onclick="startFunktion()">Start!</button></li>
+        <button type="button" id="start-button" class="start-button hidden"  value="Click" onclick="startFunktion()">Start!</button></li>
     </div>
   
         <div class="countDown">
@@ -58,6 +58,83 @@
 
     
     <script>
+
+        window.onload = $();
+  
+
+
+        var Spieleranzahl = localStorage.getItem("numberValue");
+        var spielOrtString;
+        var spielOrtStringAbspeicherung = ""; 
+        var personen = [];
+        var rollenText = "";
+        var verbleibeneSpieler = 0;
+        var i = 0; 
+
+      
+        function shuffle(a) {
+            for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+            }
+        return a;
+        }
+        
+
+            $.getJSON('datenbank.json', function(data) {
+                var randomNumber = Math.floor(Math.random() * data.ort.length);
+                spielOrtString = Object.keys(data.ort[randomNumber]);
+                personen = data["ort"][randomNumber][spielOrtString];
+                shuffle(personen.person);
+                personen.person.splice(0,13-Spieleranzahl);
+                personen.person.push({id:12,bezeichnung:"Agent"});
+                spielOrtStringAbspeicherung = spielOrtString;
+              });
+
+              $.success(function(response){
+                  
+                          console.log(personen);
+                          console.log(spielOrtStringAbspeicherung);
+                          verbleibeneSpieler = personen.length;
+                          document.getElementById("result").innerHTML = verbleibeneSpieler;
+                   
+
+              });
+  
+
+
+        function weiterFunktion(){
+            console.log("Array length: " + personen.person.length);
+            if (personen.person.length!= 0){
+                if (rollenText === "") {
+                    
+                    spielOrtString = spielOrtStringAbspeicherung;
+                    i++;
+                    var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
+                    var bezeichnung = personen.person[randomNumberFuerPerson].bezeichnung;
+                    console.log(bezeichnung);
+                    personen.person.splice(randomNumberFuerPerson,1);
+                    rollenText = bezeichnung;
+                    if (bezeichnung == "Agent"){
+                        spielOrtString = "???";    
+                        }
+                }   else if (rollenText !== ""){
+                        rollenText = "";
+                        spielOrtString = "";
+                    }
+                document.getElementById("textfeld").innerHTML = rollenText;
+                document.getElementById("spiel-ort").innerHTML = spielOrtString;
+            } else {
+                hideText = document.getElementById("profileId");
+                hideText.classList.add("hidden");
+                showText = document.getElementById("start-button");
+                showText.classList.remove("hidden");
+                //showText.classList.add("visible");
+            }
+        }
+        function startFunktion(){
+        timer();
+        }
 
         function timer(){
         // Zeit für das Spiel in Minuten
@@ -86,10 +163,8 @@
             }, 1000);
         }
 
-        var Spieleranzahl = localStorage.getItem("numberValue");
-        document.getElementById("result").innerHTML = Spieleranzahl;
 
-
+        
         const mobileBtn = document.getElementById("mobile-cta");
         nav = document.querySelector("nav"); // does the same but without the ID
         mobileBtnExit = document.getElementById("mobile-exit");
@@ -101,64 +176,6 @@
         mobileBtnExit.addEventListener("click", () => {
             nav.classList.remove("menu-btn");
         })
-        var spielOrtString;
-        var spielOrtStringAbspeicherung = ""; 
-        var personen;
-        var rollenText = "";
-
-        function shuffle(a) {
-            for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
-            }
-        return a;
-        }
-        $(function() {
-            $.getJSON('datenbank.json', function(data) {
-                var randomNumber = Math.floor(Math.random() * data.ort.length);
-                spielOrtString = Object.keys(data.ort[randomNumber]);
-                personen = data["ort"][randomNumber][spielOrtString];
-                shuffle(personen.person);
-                personen.person.splice(0,13-Spieleranzahl);
-                personen.person.push({id:12,bezeichnung:"Agent"});
-                spielOrtStringAbspeicherung = spielOrtString;
-              });
-
-        });
-        
-        var i = 0; 
-
-        function weiterFunktion(){
-            console.log("Array length: " + personen.person.length);
-            if (personen.person.length!= 0){
-                if (rollenText === "") {
-                    spielOrtString = spielOrtStringAbspeicherung;
-                    i++;
-                    var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
-                    var bezeichnung = personen.person[randomNumberFuerPerson].bezeichnung;
-                    console.log(bezeichnung);
-                    personen.person.splice(randomNumberFuerPerson,1);
-                    rollenText = bezeichnung;
-                    if (bezeichnung == "Agent"){
-                        spielOrtString = "???";    
-                        }
-                }   else if (rollenText !== ""){
-                        rollenText = "";
-                        spielOrtString = "";
-                    }
-                document.getElementById("textfeld").innerHTML = rollenText;
-                document.getElementById("spiel-ort").innerHTML = spielOrtString;
-            } else {
-                hideText = document.getElementById("profileId");
-                hideText.classList.add("hidden");
-                showText = document.getElementById("start-button");
-                showText.classList.add("visible");
-            }
-        }
-        function startFunktion(){
-        timer();
-        }
-
     </script>
 </body>
 
