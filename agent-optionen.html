@@ -30,15 +30,26 @@
     </div>
 
     <section class="hero">
-        <h1>Spieleranzahl max. 13</h1>
+        <h1>Spieleranzahl (max. 13)</h1>
         <form class="anzahl-spieler" action="agent-start.html">
             <ul>  
                 <li>
-                    <div class="slidecontainer">
-                    <p><span id="demo"></span></p>
-                    <input type="range" min="3" max="13" value="3" class="slider" id="myRange">
-                    <input type="submit" value="Click" onclick="passValues()"/>
-                  </div>
+                    <div class="slidecontainer-spielerAnzahl">
+                    <p><span id="Spieleranzahl"></span></p>
+                    <input type="range" min="3" max="13" value="3" class="slider" id="spieler-slider">
+                    </div>
+                </li>
+                <li>
+                    <h1>Zeit für den Agenten</h1>
+                </li>
+                <li>
+                    <div class="slidecontainer-zeit">
+                    <p><span id="Zeit"></span> (min)</p>
+                    <input type="range" min="5" max="12" value="3" class="slider" id="zeit-slider">
+                    </div>
+                </li>
+                <li>
+                    <input type="submit" class="einstellungen-button" value="Speichern" onclick="passValues()"/>
                 </li>
             </ul>
         </form>
@@ -48,18 +59,29 @@
 
         function passValues() 
         {
+            var anzahlDerSpieler = document.getElementById("spieler-slider").value;
+            localStorage.setItem("spielerValue",anzahlDerSpieler);
 
-            var anzahlDerSpieler = document.getElementById("myRange").value;
-            localStorage.setItem("numberValue",anzahlDerSpieler);
+            var zeitFuersSpiel = document.getElementById("zeit-slider").value;
+            localStorage.setItem("zeitValue",zeitFuersSpiel);
+
             return false;
-
         }
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
 
-        slider.oninput = function() {
-        output.innerHTML = this.value;
+        var sliderSpieler = document.getElementById("spieler-slider");
+        var outputsliderSpieler = document.getElementById("Spieleranzahl");
+        outputsliderSpieler.innerHTML = sliderSpieler.value;
+
+        sliderSpieler.oninput = function() {
+        outputsliderSpieler.innerHTML = this.value;
+        }
+
+        var sliderZeit = document.getElementById("zeit-slider");
+        var outputsliderZeit = document.getElementById("Zeit");
+        outputsliderZeit.innerHTML = sliderZeit.value;
+
+        sliderZeit.oninput = function() {
+        outputsliderZeit.innerHTML = this.value;
         }
 
         const mobileBtn = document.getElementById("mobile-cta");

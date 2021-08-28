@@ -10,6 +10,24 @@ body {
   font-family: "Poppins";
 }
 
+.anzahl-spieler li {
+  padding: 1em;
+}
+
+.einstellungen-button {
+  color: white;
+  border-radius: 1em;
+  font-style: normal;
+  padding: 1em 2em 1em 2em;
+  cursor: pointer;
+  background-color: #020285;
+  font-size: 250%;
+}
+
+p {
+  margin: 0;
+}
+
 .navbar {
   background: #ffffff;
   padding: 1em;
@@ -46,6 +64,10 @@ body {
   margin-top: 0px;
 }
 
+#anweisung {
+  color: #a00000;
+}
+
 .hidden {
   display: none;
 }
@@ -54,13 +76,32 @@ body {
   visibility: visible;
 }
 
+span {
+  font-weight: bold;
+  font-size: 120%;
+  color: var(--primary-color);
+}
+
 .wrapper {
-  text-align: center;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.wrapper li {
+  padding: 2em;
 }
 
 .wrapper ul {
-  font-weight: bold;
+  text-align: left;
   font-size: 150%;
+  font-weight: bold;
+}
+
+.wrapper li {
+  background: #e9e9e9;
+  border-style: solid;
+  border-radius: 1em;
+  margin-bottom: 1em;
 }
 
 .wrapper button {
@@ -100,11 +141,6 @@ section {
   text-align: center;
 }
 
-.hero span {
-  color: #5e5e5e;
-  font-size: 60%;
-}
-
 .hero button {
   color: white;
   border-radius: 1em;
@@ -116,10 +152,6 @@ section {
 .hero .bestätigen-button {
   background-color: #020285;
   font-size: 300%;
-}
-
-.hero li {
-  padding: 2em;
 }
 
 .hero p {

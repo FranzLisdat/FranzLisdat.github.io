@@ -32,25 +32,23 @@
     </div>
 
     <section class="hero">
-        <h1>Spielstart!</h1>
-            <h3>noch: <span id="result"></span> Rollen zu vergeben!</h3>
-            <p>
-            
-            </p>
+        <h1><span id="anweisung"></span></h1>
+            <h3>noch : <span id="result"></span> Rolle (n) zu vergeben!</h3>
+
+            <div class="wrapper" id="wrapperId">
+                <div class="profile" id="profileId">
+                    <div id= "userdata" border="2">
+                        <ul>
+                            <li>Ort : <span id="spiel-ort"></span></li>
+                            <li>Rolle : <span id="textfeld"></span></li> 
+                        </ul>
+                    </div>
+                    <button type="button" id="weiter-button" class="weiter-button" value="Click" onclick="weiterFunktion()">Weiter</button></li>
+                </div>
+                <button type="button" id="start-button" class="start-button hidden"  value="Click" onclick="startFunktion()">Start!</button></li>
+            </div>
     </section>
 
-    <div class="wrapper" id="wrapperId">
-        <div class="profile" id="profileId">
-            <div id= "userdata" border="2">
-                <ul>
-                    <li>Ort : <span id="spiel-ort"></span></li>
-                    <li>Rolle : <span id="textfeld"></span></li> 
-                </ul>
-            </div>
-            <button type="button" id="weiter-button" class="weiter-button" value="Click" onclick="weiterFunktion()">Weiter</button></li>
-        </div>
-        <button type="button" id="start-button" class="start-button hidden"  value="Click" onclick="startFunktion()">Start!</button></li>
-    </div>
   
         <div class="countDown">
             <p id="demo"></p>
@@ -59,17 +57,22 @@
     
     <script>
 
-        window.onload = $();
+    
   
 
-
-        var Spieleranzahl = localStorage.getItem("numberValue");
+        var anweisung = "Drücke auf Los! um die erste Rolle angezeigt zu bekommen!";
+        var weiterButtonText = "Los!";
+        var Spieleranzahl = localStorage.getItem("spielerValue");
+        var zeitFuersSpiel = localStorage.getItem("zeitValue");
         var spielOrtString;
         var spielOrtStringAbspeicherung = ""; 
         var personen = [];
         var rollenText = "";
         var verbleibeneSpieler = 0;
         var i = 0; 
+
+        document.getElementById("anweisung").innerHTML = anweisung;
+        document.getElementById("weiter-button").innerHTML = weiterButtonText;
 
       
         function shuffle(a) {
@@ -89,17 +92,11 @@
                 personen.person.splice(0,13-Spieleranzahl);
                 personen.person.push({id:12,bezeichnung:"Agent"});
                 spielOrtStringAbspeicherung = spielOrtString;
+              }).then(function(){
+                verbleibeneSpieler = personen.person.length;
+                document.getElementById("result").innerHTML = verbleibeneSpieler;
               });
 
-              $.success(function(response){
-                  
-                          console.log(personen);
-                          console.log(spielOrtStringAbspeicherung);
-                          verbleibeneSpieler = personen.length;
-                          document.getElementById("result").innerHTML = verbleibeneSpieler;
-                   
-
-              });
   
 
 
@@ -107,7 +104,8 @@
             console.log("Array length: " + personen.person.length);
             if (personen.person.length!= 0){
                 if (rollenText === "") {
-                    
+                    anweisung = "Merk dir die Infos!";
+                    weiterButtonText = "Habs!"
                     spielOrtString = spielOrtStringAbspeicherung;
                     i++;
                     var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
@@ -119,18 +117,28 @@
                         spielOrtString = "???";    
                         }
                 }   else if (rollenText !== ""){
+                        anweisung = "Gib das Handy weiter!";
+                        weiterButtonText = "Zeig her!";
                         rollenText = "";
                         spielOrtString = "";
                     }
+                // Update alle Infos auf der HTML
+                document.getElementById("weiter-button").innerHTML = weiterButtonText;
+                document.getElementById("anweisung").innerHTML = anweisung;
                 document.getElementById("textfeld").innerHTML = rollenText;
                 document.getElementById("spiel-ort").innerHTML = spielOrtString;
+            //Alles hidden machen und Timer zeigen
             } else {
+                anweisung = "Starte den Timer!"
+                document.getElementById("anweisung").innerHTML = anweisung;
                 hideText = document.getElementById("profileId");
                 hideText.classList.add("hidden");
                 showText = document.getElementById("start-button");
                 showText.classList.remove("hidden");
                 //showText.classList.add("visible");
             }
+            verbleibeneSpieler = personen.person.length;
+            document.getElementById("result").innerHTML = verbleibeneSpieler;
         }
         function startFunktion(){
         timer();
@@ -138,10 +146,9 @@
 
         function timer(){
         // Zeit für das Spiel in Minuten
-            var zeitBisZumEndeDesSpiels = 8;
             var now = new Date().getTime();
 
-            var countDownDate = now + (8*1003*60);
+            var countDownDate = now + (zeitFuersSpiel*1003*60);
             // Update the count down every 1 second
             var x = setInterval(function() {
                 
