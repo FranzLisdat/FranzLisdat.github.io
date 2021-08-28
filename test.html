@@ -12,7 +12,8 @@
    <script>
 
    var json;
-
+   $.getJSON('datenbank.json', function(data) {
+   }).then();
    async function getJSON(){
    var res = await fetch ('datenbank.json');
    json = await res.json();
