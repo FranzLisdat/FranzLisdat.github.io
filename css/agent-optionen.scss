@@ -23,7 +23,7 @@ body{
     padding: 1em 2em 1em 2em;
     cursor: pointer;
     background-color: rgb(2, 2, 133);
-    font-size: 250%; 
+    font-size: 200%; 
 }
 p {
     margin:0;
@@ -86,8 +86,7 @@ span {
         font-size: 150%;
         font-weight: bold;
     }   
-    padding-left: 5em;
-    padding-right: 5em;
+
     li {
         background:rgb(233, 233, 233);
         border-style: solid;
@@ -98,12 +97,12 @@ span {
         color: white;
         border-radius: 1em;
         font-style: normal;
-        padding: 1em 2em 1em 2em;
         cursor: pointer;
     }
     .weiter-button {
         background-color: rgb(2, 2, 133);
         font-size: 300%;
+
     }
     .start-button{
         background-color: rgb(139, 139, 139);

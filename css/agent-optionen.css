@@ -21,7 +21,7 @@ body {
   padding: 1em 2em 1em 2em;
   cursor: pointer;
   background-color: #020285;
-  font-size: 250%;
+  font-size: 200%;
 }
 
 p {
@@ -82,11 +82,6 @@ span {
   color: var(--primary-color);
 }
 
-.wrapper {
-  padding-left: 5em;
-  padding-right: 5em;
-}
-
 .wrapper li {
   padding: 2em;
 }
@@ -108,7 +103,6 @@ span {
   color: white;
   border-radius: 1em;
   font-style: normal;
-  padding: 1em 2em 1em 2em;
   cursor: pointer;
 }
 
