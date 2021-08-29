@@ -2,7 +2,7 @@
 $(document).ready(function(){
     document.getElementById("start-button").onclick = startFunktion;
     document.getElementById("weiter-button").onclick = weiterFunktion;
-    var anweisung = "Drücke auf Los! um die erste Rolle angezeigt zu bekommen!";
+    var anweisung = "Auf Los gehts Los!";
     var weiterButtonText = "Los!";
     var Spieleranzahl = localStorage.getItem("spielerValue");
     var zeitFuersSpiel = localStorage.getItem("zeitValue");
@@ -54,7 +54,7 @@ $(document).ready(function(){
                     spielOrtString = "???";    
                     }
             }   else if (rollenText !== ""){
-                    anweisung = "Gib das Handy weiter!";
+                    anweisung = "Handy weitergeben!";
                     weiterButtonText = "Zeig her!";
                     rollenText = "";
                     spielOrtString = "";

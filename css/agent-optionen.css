@@ -14,10 +14,6 @@ body {
   color: var(--primary-color);
 }
 
-.anzahl-spieler li {
-  padding: 1em;
-}
-
 .einstellungen-button {
   color: white;
   border-radius: 1em;
@@ -36,6 +32,7 @@ p {
   color: red;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
+  margin: 1em 0em;
 }
 
 .navbar {
@@ -87,8 +84,12 @@ p {
   visibility: visible;
 }
 
-h1 h3 {
-  font-size: 200%;
+h1 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 170%;
 }
 
 span {
@@ -135,7 +136,7 @@ ul {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
 }
 
 .neustart {
@@ -163,21 +164,42 @@ section {
   cursor: pointer;
 }
 
+#einstellungen-h1 {
+  font-size: 300%;
+  color: #a00000;
+  font-weight: bold;
+  margin: .5em;
+}
+
+.optionen {
+  text-align: center;
+  padding: 3em 2em;
+}
+
+.optionen li {
+  padding: 1em;
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+}
+
+.optionen p {
+  font-size: 3em;
+  font-weight: bold;
+  padding: .5em;
+}
+
+.optionen h1 {
+  font-size: 200%;
+}
+
+.optionen .slider {
+  width: 50%;
+}
+
 .hero {
   text-align: center;
-}
-
-.hero button {
-  color: white;
-  border-radius: 1em;
-  font-style: normal;
-  padding: 1em 2em 1em 2em;
-  cursor: pointer;
-}
-
-.hero .bestätigen-button {
-  background-color: #020285;
-  font-size: 300%;
 }
 
 .hero p {
@@ -185,8 +207,22 @@ section {
   font-weight: bold;
 }
 
-.hero .slider {
-  width: 50%;
+.spiel-anzeige {
+  text-align: center;
+  padding: 1em 4em;
+}
+
+.spiel-anzeige button {
+  color: white;
+  border-radius: 1em;
+  font-style: normal;
+  padding: 1em 2em 1em 2em;
+  cursor: pointer;
+}
+
+.spiel-anzeige .bestätigen-button {
+  background-color: #020285;
+  font-size: 300%;
 }
 
 nav.menu-btn {

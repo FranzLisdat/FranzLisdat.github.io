@@ -51,15 +51,18 @@ section {
 .hero {
     text-align: center;
     
+    h1 {
+        font-size: 250%;
+    }
     span {
         color:rgb(94, 94, 94);
-        font-size:60%;
+        font-size:70%;
     }
     
     button {
         color: white;
         border-radius: 1em;
-        font-style: normal;
+
         padding: 1em 2em 1em 2em;
         cursor: pointer;
     }

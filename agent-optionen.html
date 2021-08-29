@@ -22,9 +22,9 @@
             <nav>
                 <img src="images/exit.svg" id="mobile-exit" class="mobile-menu-exit" alt="exit-navigation">
                 <ul class="primary-nav">
-                    <li class="" id="index"><a href="/index.html">Home</a></li>
-                    <li class="" id="agent"><a href="/agent.html">Agent</a></li>
-                    <li class="" id="kontakt"><a href="/index.html">Kontakt</a></li>
+                    <li id="index"><a href="/index.html">Home</a></li>
+                    <li id="agent"><a href="/agent.html">Agent</a></li>
+                    <li id="kontakt"><a href="/index.html">Kontakt</a></li>
                 </ul>
                 <ul class="secondary-nav">
                     <li><a href="index.html">DE/EN</a></li>
@@ -34,11 +34,12 @@
         </div>
     </div>
 
-    <section class="hero">
-        <h1>Spieleranzahl (max. 13)</h1>
+    <section class="optionen">
+        <h1 id="einstellungen-h1">Einstellungen :</h1>
         <form class="anzahl-spieler" action="agent-start.html">
             <ul>  
                 <li>
+                    <h1>Spieleranzahl (max. 13)</h1>
                     <div class="slidecontainer-spielerAnzahl">
                     <p><span id="Spieleranzahl"></span></p>
                     <input type="range" min="3" max="13" value="3" class="slider" id="spieler-slider">
@@ -46,16 +47,12 @@
                 </li>
                 <li>
                     <h1>Zeit für den Agenten</h1>
-                </li>
-                <li>
                     <div class="slidecontainer-zeit">
                     <p><span id="Zeit"></span> (min)</p>
                     <input type="range" min="5" max="12" value="3" class="slider" id="zeit-slider">
                     </div>
                 </li>
-                <li>
                     <input type="submit" id="speichern-input" class="einstellungen-button" value="Speichern" />
-                </li>
             </ul>
         </form>
     </section>
