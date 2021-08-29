@@ -1,26 +1,16 @@
 <html>
 <head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script type="text/javascript" src="js/test.js"> </script>
+
 </head>
 
 <body>
 <h1>TEST SEITE</h1>
 
-<p> <span id="spiel-ort"></span> </p>
 
-   
-   <script>
+<button type="button" id="start-button" class="start-button"  value="Click" >Start!</button>
 
-   var json;
-   $.getJSON('datenbank.json', function(data) {
-   }).then();
-   async function getJSON(){
-   var res = await fetch ('datenbank.json');
-   json = await res.json();
 
-   }
-
-    getJSON().then(console.log(json));
-   </script>
 </body>
 </html>

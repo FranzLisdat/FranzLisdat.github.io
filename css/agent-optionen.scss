@@ -28,6 +28,14 @@ body{
 p {
     margin:0;
 }
+
+.countDown{
+    p {
+        color:red;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2em;
+    }
+}
 .navbar {
     background: #ffffff;
     padding: 1em;
@@ -125,10 +133,22 @@ section {
     padding: 5em 2em;
 }
 
+.neustart{
+    text-align: center;
+    padding: 2em;
+
+    .neustart-button{
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        padding: .5em 1em .5em 1em;
+        cursor: pointer;
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+    }
+}
 .hero {
     text-align: center;
-
-
     
     button {
         color: white;
@@ -147,6 +167,7 @@ section {
     p {
         font-size: 3em;
         font-weight:bold;
+   
     }
     .slider {
         width: 50%;

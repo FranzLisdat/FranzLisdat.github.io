@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franz Lisdat</title>
     <link rel="stylesheet" href="css/agent-optionen.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/agent-optionen.js"></script>
+    
+    
 </head>
 <body>
     <div class="navbar">
@@ -49,54 +54,12 @@
                     </div>
                 </li>
                 <li>
-                    <input type="submit" class="einstellungen-button" value="Speichern" onclick="passValues()"/>
+                    <input type="submit" id="speichern-input" class="einstellungen-button" value="Speichern" />
                 </li>
             </ul>
         </form>
     </section>
     
-    <script>
-
-        function passValues() 
-        {
-            var anzahlDerSpieler = document.getElementById("spieler-slider").value;
-            localStorage.setItem("spielerValue",anzahlDerSpieler);
-
-            var zeitFuersSpiel = document.getElementById("zeit-slider").value;
-            localStorage.setItem("zeitValue",zeitFuersSpiel);
-
-            return false;
-        }
-
-        var sliderSpieler = document.getElementById("spieler-slider");
-        var outputsliderSpieler = document.getElementById("Spieleranzahl");
-        outputsliderSpieler.innerHTML = sliderSpieler.value;
-
-        sliderSpieler.oninput = function() {
-        outputsliderSpieler.innerHTML = this.value;
-        }
-
-        var sliderZeit = document.getElementById("zeit-slider");
-        var outputsliderZeit = document.getElementById("Zeit");
-        outputsliderZeit.innerHTML = sliderZeit.value;
-
-        sliderZeit.oninput = function() {
-        outputsliderZeit.innerHTML = this.value;
-        }
-
-        const mobileBtn = document.getElementById("mobile-cta");
-        nav = document.querySelector("nav"); // does the same but without the ID
-        mobileBtnExit = document.getElementById("mobile-exit");
-        
-        mobileBtn.addEventListener("click", () => {
-            nav.classList.add("menu-btn");
-        })
-
-        mobileBtnExit.addEventListener("click", () => {
-            nav.classList.remove("menu-btn");
-        })
-        
-    </script>
 </body>
 
 </html>
