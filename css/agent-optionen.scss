@@ -119,11 +119,7 @@ span {
         font-size: 300%;
 
     }
-    .start-button{
-        background-color: rgb(139, 139, 139);
-        color: red;
-        font-size: 300%;
-    }
+
 
 }
 a {
@@ -152,6 +148,15 @@ section {
         cursor: pointer;
         background-color: rgb(2, 2, 133);
         font-size: 300%;
+    }
+    .start-button{
+        background-color: rgb(31, 31, 31);
+        color: red;
+        padding: .5em 1em .5em 1em;
+        font-size: 300%;
+        border-radius: 1em;
+        font-style: normal;
+        cursor: pointer;
     }
 }
 .hero {
