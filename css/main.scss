@@ -13,14 +13,14 @@ body{
 .navbar {
     background: #ffffff;
     padding: 1em;
-
+    
     .logo{
         text-decoration: none; //removes underscores and the "hyperlink" glow etc
         font-weight: bold;
         color: rgb(0, 0, 0);
-    }
-    span{
-        color: var(--primary-color);
+        .logoLisdat {
+            color: var(--primary-color);
+        }
     }
     nav {
         display:none;

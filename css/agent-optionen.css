@@ -10,6 +10,10 @@ body {
   font-family: "Poppins";
 }
 
+.logoLisdat {
+  color: var(--primary-color);
+}
+
 .anzahl-spieler li {
   padding: 1em;
 }
@@ -72,6 +76,7 @@ p {
 
 #anweisung {
   color: #a00000;
+  font-size: 200%;
 }
 
 .hidden {
@@ -82,10 +87,12 @@ p {
   visibility: visible;
 }
 
+h1 h3 {
+  font-size: 200%;
+}
+
 span {
   font-weight: bold;
-  font-size: 120%;
-  color: var(--primary-color);
 }
 
 .wrapper li {

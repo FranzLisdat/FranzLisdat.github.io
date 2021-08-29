@@ -20,7 +20,7 @@ body {
   color: black;
 }
 
-.navbar span {
+.navbar .logo .logoLisdat {
   color: var(--primary-color);
 }
 
