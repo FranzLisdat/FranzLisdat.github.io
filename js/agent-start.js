@@ -72,6 +72,7 @@ $(document).ready(function(){
             hideText.classList.add("hidden");
             showText = document.getElementById("start-button");
             showText.classList.remove("hidden");
+            document.getElementById("demo").innerHTML = zeitFuersSpiel + "m " + "0s ";
             
         }
         verbleibeneSpieler = personen.person.length;
@@ -81,6 +82,8 @@ $(document).ready(function(){
             document.getElementById("result").innerHTML = "alle Rollen wurden vergeben!";
         }
     }
+
+
     function startFunktion(){
         anweisung = "Timer läuft!!"
         document.getElementById("anweisung").innerHTML = anweisung;
@@ -106,7 +109,7 @@ $(document).ready(function(){
             
         // Output the result in an element with id="demo"
         document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
-            
+
             // If the count down is over, write some text 
             if (distance < 0) {
                 clearInterval(x);

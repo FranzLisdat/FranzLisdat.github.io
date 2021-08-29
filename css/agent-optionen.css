@@ -124,12 +124,6 @@ span {
   font-size: 300%;
 }
 
-.wrapper .start-button {
-  background-color: #8b8b8b;
-  color: red;
-  font-size: 300%;
-}
-
 a {
   color: #949ef8;
 }
@@ -157,6 +151,16 @@ section {
   cursor: pointer;
   background-color: #020285;
   font-size: 300%;
+}
+
+.neustart .start-button {
+  background-color: #1f1f1f;
+  color: red;
+  padding: .5em 1em .5em 1em;
+  font-size: 300%;
+  border-radius: 1em;
+  font-style: normal;
+  cursor: pointer;
 }
 
 .hero {
