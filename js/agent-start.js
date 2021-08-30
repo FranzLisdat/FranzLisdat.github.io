@@ -38,7 +38,6 @@ $(document).ready(function(){
         });
 
     function weiterFunktion(){
-        console.log("Array length: " + personen.person.length);
         if (personen.person.length!= 0){
             if (rollenText === "") {
                 anweisung = "Merk dir die Infos!";
@@ -47,7 +46,6 @@ $(document).ready(function(){
                 i++;
                 var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
                 var bezeichnung = personen.person[randomNumberFuerPerson].bezeichnung;
-                console.log(bezeichnung);
                 personen.person.splice(randomNumberFuerPerson,1);
                 rollenText = bezeichnung;
                 if (bezeichnung == "Agent"){
