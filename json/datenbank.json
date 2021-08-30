@@ -111,6 +111,1515 @@
                     }
                 ]
             }
+        },
+        {
+            "Supermarkt": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"kleines Kind"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Verkäufer"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Mutter"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Oma"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Dieb"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Kunde"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Secruity"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Opa"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Schichtleiter"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"schreiendes Baby"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Alki"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Gefängnis": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Wärter"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Insasse wegen Drogenbesitz"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Insasse wegen Mord"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Insasse wegen Steuerhinterziehung"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Direktor"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Mafiaboss"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Spitzel"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Anwalt"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Besucher"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Arzt für Notfälle"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Psychologe"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Bahnhof": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Fahrkarten - kontrolleur"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"mitfahrende Oma"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Fußballfan"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"überarbeiteter Businessmensch"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Schwarzfahrer"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Obdachloser"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Raver auf dem weg zu einer Party"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Schüler"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Polizist"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Straßenfeger - Verkäufer"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Querdenker - ohne Maske"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Typ der gefälschte Fahrkarten verkauft"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Flughafen": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Sicherheitsmann* Frau"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Mensch der nach Mallorca fliegen will"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Souvenir - Shop Verkäufer"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Terrorist"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Tourist"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Pilot*in"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"verliebtes Pärchen"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Getränke Verkäufer"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Überteurtes Essen - Verkäufer"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"eingebildeter Star - Kanye West"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"nörgelnde  Frau - Karen"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Festival": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Sicherheitsmann* Frau"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Dauerbesoffener Typ"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Gitarrist"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Sänger"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Druffi"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"normaler Besucher"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Der Kiffer"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Der Dealer"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Zivilpolizist"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"DJ"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Der Pöbelnde Typ"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Eklige Creep"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Casino": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Prostituirte"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Croupier - Dealer"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Mann der alles verloren hat"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Frau die den Jackpot knackt"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Sicherheitsmann* Frau"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Manager"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Typ der gratis Essen will"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Mafiaboss"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Blackjack - Nerd"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Rausschmeißer"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"typische Späti - Alki"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Reicher Futzi"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Bikini Bottom": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Spongebob Schwammkopf"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Patrick Star"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Thaddäus Q. Tentakel"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Eugene H. Krabs"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Sandy Cheeks"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Sheldon J. Plankton"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Garry - Gerald B. Schneckerich"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Perla Krabs"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Mrs. - Poppy - Puff"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Planktons Frau - Karen"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Larry von Lobster"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Siegbert Schnösel"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Fussballstadion": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Security"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Kommentator"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"normale Fan"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Schiedsrichter"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Trainer"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Spieler"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Bierverkäufer"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Snackverkäufer"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Hooligan"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Balljunge"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Fußball - Flitzer"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Zirkus": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Zirkuslöwe"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Zuschauer Oma"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Akrobat"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Zirkusdirektor"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Musiker"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Clown"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Zuschauer Kind"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Zuschauer Zirkusfan"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Jongleur"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Tier - Trainer"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Zauberkünstler"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Elefant"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Hochzeit": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Blumenkind"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Trauzeuge"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"random Gast der Essen snackt"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Bräutigam"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Fotograf"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Pianist"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Braut"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Ex der Braut"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Ex des Bräutigam"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"besoffener Kumpel des Bräutigam"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Mutter der Braut"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Vater des Bräutigam"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Stand": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Barkeeper"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Volleyball - Spieler"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Dieb"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Eisverkäufer"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Taucher"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Touri"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Rettungsschwimmer"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Sonnenbrillenverkäufer"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Insta - Gurl"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Fuckboy am Strand"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Surfer"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"der eine nackte Opa"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Park": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Mutter"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Parkwächter"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Obdachloser"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Hundebesitzer"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Alte Dame"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Kind"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Cannabiskonsument"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Cannabisverkäufer"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Alki auf der Bank"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Jogger"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"ü40 Mutti am Yoga machen"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"der Dude mit der Gitarre"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Disco": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Besoffener"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Security"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"DJ"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Creepy Dude in der Ecke"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Junggesellin"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Barkeeper"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Toilettendienst"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Creepy Dude der alle antanzt"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Druffi"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Der Raucher"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Der Schlafende"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Der Eine der alle kennt"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Museum": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Dieb"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Security"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Souvenir - Shop Verkäufer*in"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Besucher - Omi"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Besucher - Kind"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Nachtwächter"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Museumsführer"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Touri"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Kunststudent"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Schnösel"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Kunstliebhaber"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Jahrmarkt": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"kleines Kind"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Live - Musiker"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Besoffener Jugendlicher"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Pommesbudenverkäufer"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Dieb"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Attraktionsmoderator"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Schütze am Schießstand"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Polizist*in"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Typ mit seiner Freundin"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Oma mit Opi"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Typ der Unterschriften sammelt"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Mutti mit Kind"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Super Mario Universum": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Kettenhund"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Toad"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Bowser"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Mario"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Luigi"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Yoshi"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Prinzessin Peach"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Wario"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Prinzessin Daisy"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Baby Mario"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Bowser Jr."
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Koopa - Schildkröte"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Star Wars Universum": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Obi-Wan Kenobi"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Boba Fett"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Yoda"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Jar Jar Binks"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"C-3PO"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Der Imperator"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Luke Skywalker"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"R2-D2"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Prinzessin Leia"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Sturmtruppler"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Darth Vader"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Anakin Skywalker"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Shreks Sumpf": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Shrek"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Esel"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Fiona"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Prinz Charming"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Gestiefelter Kater"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Lebkuchenmann"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Ritter"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Zwerg"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Fee"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Schwein"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Drache"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Der Böse Wolf"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Campingplatz": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Security"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Jemand Betrunkenes"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Festivalbesucher"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Familienvater"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Stoner"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Grillmeister"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Jemand mit Gitarre"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Camping - Liebhaber"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Zivilpolizist"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Kind - Schulklasse"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Lehrer*in Schulklasse"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Hippie"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Polizeirevier": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Polizist"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Sekretärin"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Krimineller - Schläger"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Prostituirte"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Kiffer"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Polizeichef"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Dome"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Polizeihund"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Krimineller - Drogendealer"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Junge mit gefundener Geldbörse"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Polizist in der Ausbildung"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Der Wilde Westen": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Bandit"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Indianer"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Cowgirl"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Cowboy"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Pferd"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Sheriff"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Barbesitzer"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Kellner*in Gaststätte"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Gefängnisinsasse"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Goldgräber"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Ölgräber"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Lokomotivführer"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Dschungel": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Schlange"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Affe"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Gorilla"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Papagei"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Tiger"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Elefant"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Giraffe"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Ameise"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Chamäleon"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Jaguar"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Faultier"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Ameisenbär"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Tierarztpraxis": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Hund"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Arzthelfer*in"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Tierarzt"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Sekretär*in"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Katze"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Besorgter Katzenbesitzer*in"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Besorgter Hundebesitzer*in"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Praktikant*in"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Schlange"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Schlangenbesitzer*in"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"besorgtes Kind"
+                    }
+
+
+                ]
+            }
+        
+        },        
+        {
+            "Kino": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Mädchen auf einem Date"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Ticketabreißer"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Junge auf einem Date"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"normaler Besucher"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Manager"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Film - Liebhaber"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Hausmeister"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Kartenverkäufer"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Toilettenwärter"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Kind mit Schnurrbart"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Security"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Filmstudio": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Regisseur"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Schauspieler*in"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Stunt Double"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Statist"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Kameramann*frau"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Kostümdesigner*in"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Praktikant"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Superstart"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Star - Manager"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Putzkraft"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Catering - Person"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Lichttechniker"
+                    }
+
+
+                ]
+            }
+        
+        },
+        {
+            "Bei Kjeld - Lübars": 
+                {
+                "person":[
+                    {
+                        "id":0,
+                        "bezeichnung":"Gerd"
+                    },
+                    {
+                        "id":1,
+                        "bezeichnung":"Kjeld"
+                    },
+                    {
+                        "id":2,
+                        "bezeichnung":"Michel"
+                    },
+                    {
+                        "id":3,
+                        "bezeichnung":"Andi"
+                    },
+                    {
+                        "id":4,
+                        "bezeichnung":"Diana"
+                    },
+                    {
+                        "id":5,
+                        "bezeichnung":"Random Typ den keiner kennt"
+                    },
+                    {
+                        "id":6,
+                        "bezeichnung":"Wellensittich"
+                    },
+                    {
+                        "id":7,
+                        "bezeichnung":"Marv"
+                    },
+                    {
+                        "id":8,
+                        "bezeichnung":"Karo"
+                    },
+                    {
+                        "id":9,
+                        "bezeichnung":"Paul"
+                    },
+                    {
+                        "id":10,
+                        "bezeichnung":"Cari"
+                    },
+                    {
+                        "id":11,
+                        "bezeichnung":"Dome"
+                    }
+
+
+                ]
+            }
+        
         }
+              
     ]
 }
