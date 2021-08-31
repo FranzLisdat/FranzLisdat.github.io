@@ -9,7 +9,17 @@ body{
     margin:0;
     font-family: "Poppins";
 }
-
+.light-dark-button{
+    font-family: "Poppins";
+    background: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    background:none;
+    border:none;
+    &:hover {
+        font-weight:bold;
+    }
+}
 .navbar {
     background: #ffffff;
     padding: 1em;
@@ -125,6 +135,23 @@ nav {
                 font-weight:bold;
             }
         }
+        .light-dark-button{
+            all: initial; 
+           * {
+                all:unset;
+            }
+            color:white;
+            text-decoration: none;
+            display:block;
+            padding: .5em;
+            font-size: 1.3em;
+            font-family: "Poppins";
+            width:95%;
+            text-align: right;
+            &:hover {
+                font-weight:bold;
+            }
+        }
     }
 }
 
@@ -137,6 +164,17 @@ nav {
 // ab 768px (Tablet size)
 @media only screen and (min-width: 768px) {
 
+    .light-dark-button{
+        font-family: "Poppins";
+        background: #ffffff;
+        font-size: 1em;
+        cursor: pointer;
+        background:none;
+        border:none;
+        &:hover {
+            font-weight:bold;
+        }
+    }
     .mobile-menu, .mobile-menu-exit{
         display:none;
     }
@@ -175,18 +213,7 @@ nav {
             font-weight:bold;
         }
 
-        li.lightdark a {
-            color: var(--primary-color);
-            border: 3px solid var(--primary-color);
-            font-weight:bold;
-            border-radius: 5em;
-            margin-top: -.2em;
 
-            &:hover {
-                background:var(--primary-color);
-                color: white;
-            }
-        }
         
     }
 }

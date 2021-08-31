@@ -10,52 +10,17 @@ body{
     font-family: "Poppins";
 }
 
-.light-dark-button{
-    font-family: "Poppins";
-    background: #ffffff;
-    font-size: 1em;
-    cursor: pointer;
-    background:none;
-    border:none;
-    &:hover {
-        font-weight:bold;
-    }
-}
-.logoLisdat {
-    color: var(--primary-color);
-}
-.einstellungen-button {
-    color: white;
-    border-radius: 1em;
-    font-style: normal;
-    padding: 1em 2em 1em 2em;
-    cursor: pointer;
-    background-color: rgb(2, 2, 133);
-    font-size: 200%; 
-}
-p {
-    margin:0;
-}
-
-.countDown{
-    p {
-        color:red;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 2em;
-        margin: 1em 0em;
-    }
-}
 .navbar {
     background: #ffffff;
     padding: 1em;
-
+    
     .logo{
         text-decoration: none; //removes underscores and the "hyperlink" glow etc
         font-weight: bold;
         color: rgb(0, 0, 0);
-    }
-    span{
-        color: var(--primary-color);
+        .logoLisdat {
+            color: var(--primary-color);
+        }
     }
     nav {
         display:none;
@@ -71,64 +36,6 @@ p {
     }
 }
 
-.countDown {
-    text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
-}
-
-#anweisung {
-    color: rgb(160, 0, 0);
-    font-size: 200%;
-
-}
-.hidden {
-    display:none;
-}
-.visible{
-    visibility: visible;
-} 
-h1 {
-    font-size: 150%;
-}
-h3 {
-    font-size: 170%;
-}
-span {
-    font-weight:bold;
-}
-.wrapper {
-    
-    li {
-        padding: 2em;
-    
-    }
-    ul {
-        text-align: left;
-        font-size: 150%;
-        font-weight: bold;
-    }   
-
-    li {
-        background:rgb(233, 233, 233);
-        border-style: solid;
-        border-radius: 1em;
-        margin-bottom: 1em;
-    }
-    button {
-        color: white;
-        border-radius: 1em;
-        font-style: normal;
-        cursor: pointer;
-    }
-    .weiter-button {
-        background-color: rgb(2, 2, 133);
-        font-size: 300%;
-
-    }
-
-
-}
 a {
     color:#949ef8
 }
@@ -140,89 +47,142 @@ ul {
 }
 
 section {
-    padding: 2em 2em;
+    padding: 5em 2em;
 }
 
-.neustart{
-    text-align: center;
-    padding: 2em;
-
-    .neustart-button{
-        color: white;
-        border-radius: 1em;
-        font-style: normal;
-        padding: .5em 1em .5em 1em;
-        cursor: pointer;
-        background-color: rgb(2, 2, 133);
-        font-size: 300%;
-    }
-    .start-button{
-        background-color: rgb(31, 31, 31);
-        color: red;
-        padding: .5em 1em .5em 1em;
-        font-size: 300%;
-        border-radius: 1em;
-        font-style: normal;
-        cursor: pointer;
-    }
-}
-
-#einstellungen-h1{
-    font-size: 300%;
-    color: #a00000;
-    font-weight: bold;
-    margin:.5em;
-}
-.optionen {
-    text-align: center;
-    padding: 3em 2em;
-
-    li {
-        padding: 1em;
-        background-color:#f5f5f5;
-        border-radius: 1em;
-        margin: 1em;
-        padding: 1em;
-    }
-  
-   
-    p {
-        font-size: 3em;
-        font-weight:bold;
-        padding: .5em;
-    }
-    h1 {
-        font-size: 200%;
-    }
-    .slider {
-        width: 50%;
-    }
-}
 .hero {
     text-align: center;
-    
-    p {
-        font-size: 3em;
-        font-weight:bold;
+}
+
+.left-col {
+
+    .subhead {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: gray;
+        letter-spacing: .3em;
+    }
+
+    h1 {
+        font-size:2.5em; 
+    }
+
+    .primary-cta {
+        background: var(--primary-color);
+        color:white;
+        text-decoration:none;
+        padding: .6em 1.3em;
+        font-size: 1.4em;
+        border-radius: 5em;
+        font-weight: bold;
+        display: inline-block;
+    }
+    .watch-video-cta {
+        display:block;
+        margin: 1em;
+    }
+    img {
+        margin-right: .5em;
     }
 }
 
-.spiel-anzeige {
-    text-align: center;
-    padding: 1em 4em;
-    button {
-        color: white;
+.hero-img {
+    width:70%;
+    margin-top:3em;
+}
+
+section.features-section {
+    background: #120d38;
+    color: white;
+}
+
+ul.features-list {
+    margin: 0;
+    padding-left:.1em;
+    display:grid;
+
+    li {
+        font-size: 1.1em;
+        margin-bottom:1em;
+        margin-left:2em;
+        position:relative;
+
+        &:before {
+            content: "";
+            left:-2em;
+            position:absolute;
+            width: 20px;
+            height:20px;
+            background-image:url("../images/bullet.svg");
+            background-size:contain;
+            margin-right:.5em;
+        }
+    }
+}
+
+.features-section img {
+    display:none;
+}
+
+.testimonails-section  {
+    background: var(--primary-color);
+    color: white;
+
+    li {
+        background: #006BD6;
+        text-align:center;
+        padding: 2em 1em;
+        width: 80%;
+        margin: 0 auto 5em auto;
         border-radius: 1em;
-        font-style: normal;
-        padding: 1em 2em 1em 2em;
-        cursor: pointer;
-    }
-    .bestätigen-button {
-        background-color: rgb(2, 2, 133);
-        font-size: 300%;
+
+        img {
+            width:5em;
+            height:5em;
+            border: 5x solid #006BD6;
+            border-radius:50%;
+            margin-top: -4.5em;
+        }
     }
 }
 
+h2 {
+    font-size: 2em;
+}
+
+label {
+    display:block;
+    font-size:1.2em;
+    margin-bottom: .5em;
+}
+
+input, textarea {
+    width:100%;
+    padding: .8em;
+    margin-bottom: 1em;
+    border-radius: .3em;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight:bold;
+    font-size: 1.3em;
+    border:none;
+    margin-bottom:5em;
+    border-radius: 5em;
+    display: inline-block;
+    padding: .8em 2em;
+    width: unset;
+    cursor: pointer;
+}
+
+iframe {
+    width:100%;
+    height:300px;
+}
 
 nav.menu-btn {
     display:block;
@@ -241,6 +201,7 @@ nav {
     ul.primary-nav {
         margin-top: 5em;
     }
+
 
     li {
 
@@ -273,6 +234,27 @@ nav {
                 font-weight:bold;
             }
         }
+        // button{
+        //     color:white;
+        //     background: #20272E;
+        //     border:none;
+        //     text-decoration: none;
+        //     display:block;
+        //     padding: .5em;
+        //     font-size: 1.3em;
+        //     text-align:right;
+        //     font-family: "Poppins";
+        //     text-align:right;
+        //     width:100%;
+        //     right:0;
+        //     background: #20272E;
+        //     padding:none;
+        //     padding-right: 1em;
+        //     &:hover {
+        //         font-weight:bold;
+        //     }
+        
+        // }
     }
 }
 
@@ -285,6 +267,18 @@ nav {
 // ab 768px (Tablet size)
 @media only screen and (min-width: 768px) {
 
+    
+    .light-dark-button{
+        font-family: "Poppins";
+        background: #ffffff;
+        font-size: 1em;
+        cursor: pointer;
+        background:none;
+        border:none;
+        &:hover {
+            font-weight:bold;
+        }
+    }
     .mobile-menu, .mobile-menu-exit{
         display:none;
     }
@@ -321,7 +315,10 @@ nav {
 
         li.current a {
             font-weight:bold;
-        }     
+        }
+
+
+        
     }
 }
 
@@ -375,3 +372,11 @@ nav {
     }
 }
 
+footer{
+
+   background-color: var(--primary-color);
+    
+   p {
+       color: var(--primary-color);
+   }
+}

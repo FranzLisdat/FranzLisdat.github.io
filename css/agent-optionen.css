@@ -10,6 +10,19 @@ body {
   font-family: "Poppins";
 }
 
+.light-dark-button {
+  font-family: "Poppins";
+  background: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.light-dark-button:hover {
+  font-weight: bold;
+}
+
 .logoLisdat {
   color: var(--primary-color);
 }
@@ -257,6 +270,26 @@ nav li a:hover {
   font-weight: bold;
 }
 
+nav li .light-dark-button {
+  all: initial;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.3em;
+  font-family: "Poppins";
+  width: 95%;
+  text-align: right;
+}
+
+nav li .light-dark-button * {
+  all: unset;
+}
+
+nav li .light-dark-button:hover {
+  font-weight: bold;
+}
+
 .mobile-menu-exit {
   float: right;
   margin: .5em;
@@ -302,20 +335,20 @@ nav li a:hover {
   .navbar nav li.current a {
     font-weight: bold;
   }
-  .navbar nav li.lightdark a {
-    color: var(--primary-color);
-    border: 3px solid var(--primary-color);
-    font-weight: bold;
-    border-radius: 5em;
-    margin-top: -.2em;
-  }
-  .navbar nav li.lightdark a:hover {
-    background: var(--primary-color);
-    color: white;
-  }
 }
 
 @media only screen and (min-width: 1080px) {
+  .light-dark-button {
+    font-family: "Poppins";
+    background: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .light-dark-button:hover {
+    font-weight: bold;
+  }
   .navbar .logo {
     font-size: 130%;
   }

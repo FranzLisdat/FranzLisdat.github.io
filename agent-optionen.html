@@ -6,34 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franz Lisdat</title>
     <link rel="stylesheet" href="css/agent-optionen.css">
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-    <script type="text/javascript" src="js/nav.js"></script>
     <script type="text/javascript" src="js/agent-optionen.js"></script>
     
     
 </head>
 <body>
-    <div class="navbar">
-        <div class="container">
-            <a class="logo" href="index.html">Franz <span class="logoLisdat">Lisdat</span></a>
-
-            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="open-navigation">
-          
-            <nav>
-                <img src="images/exit.svg" id="mobile-exit" class="mobile-menu-exit" alt="exit-navigation">
-                <ul class="primary-nav">
-                    <li id="index"><a href="/index.html">Home</a></li>
-                    <li id="agent"><a href="/agent.html">Agent</a></li>
-                    <li id="kontakt"><a href="/index.html">Kontakt</a></li>
-                </ul>
-                <ul class="secondary-nav">
-                    <li><a href="index.html">DE/EN</a></li>
-                    <li class="lightdark"><a href="index.html">Light/DarkMode</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
+    <div id="nav-placeholder"></div>
+    <script> $("#nav-placeholder").load("nav.html");
+    </script>
     <section class="optionen">
         <h1 id="einstellungen-h1">Einstellungen :</h1>
         <form class="anzahl-spieler" action="agent-start.html">
