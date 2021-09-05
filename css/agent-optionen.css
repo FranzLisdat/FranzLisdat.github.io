@@ -30,11 +30,13 @@ body {
 .einstellungen-button {
   color: white;
   border-radius: 1em;
-  font-style: normal;
+  font-family: "Poppins";
   padding: 1em 2em 1em 2em;
   cursor: pointer;
   background-color: #020285;
   font-size: 200%;
+  font-weight: bold;
+  margin-top: .3em;
 }
 
 p {
@@ -44,12 +46,12 @@ p {
 .countDown p {
   color: red;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: .5em 0em;
 }
 
 .navbar {
-  background: #ffffff;
+  background: #f7f4f4;
   padding: 1em;
 }
 
@@ -138,6 +140,8 @@ span {
 .wrapper .weiter-button {
   background-color: #020285;
   font-size: 300%;
+  font-family: "Poppins";
+  font-weight: bold;
 }
 
 a {
@@ -167,7 +171,6 @@ section {
   cursor: pointer;
   background-color: #020285;
   font-size: 300%;
-  margin-top: 1em;
 }
 
 .neustart .start-button {
@@ -176,7 +179,8 @@ section {
   border-radius: 1em;
   font-size: 300%;
   padding: 1em 2em 1em 2em;
-  font-style: normal;
+  font-family: "Poppins";
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -244,7 +248,7 @@ section {
   color: white;
   border-radius: 1em;
   font-style: normal;
-  padding: 1em 2em 1em 2em;
+  padding: 1em 1.5em 1em 1.5em;
   cursor: pointer;
 }
 
