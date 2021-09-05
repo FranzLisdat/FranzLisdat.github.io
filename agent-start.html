@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franz Lisdat</title>
-    <link rel="stylesheet" href="css/agent-optionen.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <script type="text/javascript" src="js/agent-start.js"></script>
@@ -15,33 +15,29 @@
     <div id="nav-placeholder"></div>
     <script> $("#nav-placeholder").load("nav.html");
     </script>
-    <section class="hero">
-        <h1><span id="anweisung"></span></h1>
-        <h3><span id="result"></span></h3>
+    <section class="main-section-agent-start">
+        <h1><span id="game-instructions"></span></h1>
+        <h3><span id="players-left-text"></span></h3>
     </section>
 
-    <div class="spiel-anzeige" id="spiel-anzeigeId">
-        <div class="wrapper" id="wrapperId">
-            <div class="profile" id="profileId">
-                <div id= "userdata" border="2">
-                    <ul>
-                        <li>Ort : <span id="spiel-ort"></span></li>
-                        <li>Rolle : <span id="textfeld"></span></li> 
-                    </ul>
-                    <button type="button" id="weiter-button" class="weiter-button" value="Click" >Weiter</button></li>
-                 </div>
-            </div>
+    <div class="main-part-agent-start" id="main-part-id">
+        <div class="game-info-fields" id="wrapperId">
+            <ul>
+                <li>Ort : <span id="spiel-ort"></span></li>
+                <li>Rolle : <span id="textfeld"></span></li> 
+            </ul>
+            <button type="button" id="weiter-button" class="weiter-button" value="Click" >Weiter</button></li>
         </div>
     </div>
         
         <div class="countDown">
             <p id="demo"></p>
         </div>
-        <div class="neustart">
+        <div class="button-section-agent-start">
             <a href="agent-optionen.html">
-                <button type="button" id="neustart-button" class="neustart-button hidden"  value="Click"  >Neue Runde!</button></li>
+                <button type="button" id="play-again-button" class="play-again-button hidden"  value="Click"  >Neue Runde!</button></li>
             </a>
-            <button type="button" id="start-button" class="start-button hidden"  value="Click" >Start!</button></li>
+            <button type="button" id="start-timer-button" class="start-button hidden"  value="Click" >Start!</button></li>
         </div>
     
 </body>
