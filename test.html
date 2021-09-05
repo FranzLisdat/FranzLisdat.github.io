@@ -1,16 +1,21 @@
 <html>
 <head>
+<link rel="stylesheet" href="css/test.css">
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-<script type="text/javascript" src="js/test.js"> </script>
 
 </head>
 
 <body>
-<h1>TEST SEITE</h1>
-
-
-<button type="button" id="start-button" class="start-button"  value="Click" >Start!</button>
-
-
+    <div id="nav-placeholder"></div>
+    <script> $("#nav-placeholder").load("nav.html");
+    </script>
+    <h1>TEST SEITE</h1>
+    
+    <a href="index.html" class="testclass">another test</a>
+    <button type="button" id="start-button" class="start-button"  value="Click" >Start!</button>
+    
+    
+    
 </body>
 </html>

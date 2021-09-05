@@ -11,7 +11,6 @@ $(document).ready(function(){
     var personen = [];
     var rollenText = "";
     var verbleibeneSpieler = 0;
-    var i = 0; 
 
     document.getElementById("anweisung").innerHTML = anweisung;
     document.getElementById("weiter-button").innerHTML = weiterButtonText;
@@ -43,16 +42,14 @@ $(document).ready(function(){
                 anweisung = "Merk dir die Infos!";
                 weiterButtonText = "Habs!"
                 spielOrtString = spielOrtStringAbspeicherung;
-                i++;
                 var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
-                var bezeichnung = personen.person[randomNumberFuerPerson].bezeichnung;
+                rollenText = personen.person[randomNumberFuerPerson].bezeichnung;
                 personen.person.splice(randomNumberFuerPerson,1);
-                rollenText = bezeichnung;
-                if (bezeichnung == "Agent"){
+                if (rollenText == "Agent"){
                     spielOrtString = "???";    
                     }
             }   else if (rollenText !== ""){
-                    anweisung = "Handy weitergeben!";
+                    anweisung = "Weitergeben!";
                     weiterButtonText = "Zeig her!";
                     rollenText = "";
                     spielOrtString = "";
@@ -66,7 +63,7 @@ $(document).ready(function(){
         } else {
             anweisung = "Starte den Timer!"
             document.getElementById("anweisung").innerHTML = anweisung;
-            hideText = document.getElementById("profileId");
+            hideText = document.getElementById("spiel-anzeigeId");
             hideText.classList.add("hidden");
             showText = document.getElementById("start-button");
             showText.classList.remove("hidden");

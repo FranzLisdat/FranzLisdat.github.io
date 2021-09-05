@@ -18,7 +18,6 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 160%;
 }
 
 .navbar .logo .logoLisdat {
@@ -38,11 +37,6 @@ body {
 
 .navbar .mobile-menu {
   cursor: pointer;
-}
-
-.custom-darkmode {
-  -webkit-filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
-          filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
 }
 
 a {
@@ -198,6 +192,11 @@ nav.menu-btn {
   display: block;
 }
 
+.custom-darkmode {
+  -webkit-filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+          filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+}
+
 nav {
   position: fixed;
   z-index: 999;
@@ -253,6 +252,17 @@ nav li .light-dark-button:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  .light-dark-button {
+    font-family: "Poppins";
+    background: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .light-dark-button:hover {
+    font-weight: bold;
+  }
   .mobile-menu, .mobile-menu-exit {
     display: none;
   }
@@ -263,31 +273,17 @@ nav li .light-dark-button:hover {
         grid-template-columns: 180px auto;
   }
   .navbar nav {
-    font-size: 130%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background: none;
     position: unset;
     height: auto;
     width: 100%;
     padding: 0;
-  }
-  .navbar nav .light-dark-button {
-    all: initial;
-    color: black;
-    text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 110%;
-    font-family: "Poppins";
-  }
-  .navbar nav .light-dark-button * {
-    all: unset;
-  }
-  .navbar nav .light-dark-button:hover {
-    font-weight: bold;
   }
   .navbar nav ul {
     display: -webkit-box;
@@ -308,8 +304,19 @@ nav li .light-dark-button:hover {
 }
 
 @media only screen and (min-width: 1080px) {
+  .light-dark-button {
+    font-family: "Poppins";
+    background: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .light-dark-button:hover {
+    font-weight: bold;
+  }
   .navbar .logo {
-    font-size: 160%;
+    font-size: 130%;
   }
   .container {
     width: 1080px;
@@ -347,4 +354,4 @@ footer {
 footer p {
   color: var(--primary-color);
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=test.css.map */
