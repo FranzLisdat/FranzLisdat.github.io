@@ -2,7 +2,7 @@
 $(document).ready(function(){
     document.getElementById("start-button").onclick = startFunktion;
     document.getElementById("weiter-button").onclick = weiterFunktion;
-    var anweisung = "Auf Los gehts Los!";
+    var anweisung = "Kann Losgehen!";
     var weiterButtonText = "Los!";
     var Spieleranzahl = localStorage.getItem("spielerValue");
     var zeitFuersSpiel = localStorage.getItem("zeitValue");

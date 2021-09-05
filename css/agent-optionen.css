@@ -100,6 +100,7 @@ p {
 
 h1 {
   font-size: 150%;
+  margin: 0;
 }
 
 h3 {
@@ -150,7 +151,7 @@ ul {
 }
 
 section {
-  padding: 2em 2em;
+  padding: .5em .5em;
 }
 
 .neustart {
@@ -180,33 +181,41 @@ section {
 }
 
 #einstellungen-h1 {
-  font-size: 300%;
+  font-size: 280%;
   color: #a00000;
   font-weight: bold;
-  margin: .5em;
+  margin: .3em;
 }
 
 .optionen {
   text-align: center;
-  padding: 1em 2em;
+  padding: 1em .5em;
+}
+
+.optionen .spieler-anzahl-schrift {
+  font-size: 80%;
 }
 
 .optionen li {
   padding: 1em;
   background-color: #f5f5f5;
   border-radius: 1em;
-  margin: 1em;
-  padding: 1em;
+  margin: .5em 1em;
+  padding: .5em;
 }
 
 .optionen p {
   font-size: 3em;
   font-weight: bold;
-  padding: .5em;
+  padding: .3em;
 }
 
 .optionen h1 {
   font-size: 200%;
+}
+
+.optionen h1 span {
+  font-size: 60%;
 }
 
 .optionen .slider {
@@ -222,9 +231,13 @@ section {
   font-weight: bold;
 }
 
+.hero h3 {
+  margin: 0;
+}
+
 .spiel-anzeige {
   text-align: center;
-  padding: 1em 4em;
+  padding: .5em 1em;
 }
 
 .spiel-anzeige button {
