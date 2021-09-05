@@ -40,7 +40,7 @@ $(document).ready(function(){
         if (personen.person.length!= 0){
             if (rollenText === "") {
                 anweisung = "Merk dir die Infos!";
-                weiterButtonText = "Habs!"
+                weiterButtonText = "Habs!";
                 spielOrtString = spielOrtStringAbspeicherung;
                 var randomNumberFuerPerson = Math.floor(Math.random() * personen.person.length);
                 rollenText = personen.person[randomNumberFuerPerson].bezeichnung;
@@ -74,7 +74,7 @@ $(document).ready(function(){
         if (verbleibeneSpieler != 0){
             document.getElementById("result").innerHTML = "noch : " + verbleibeneSpieler + " Rolle (n) zu vergeben!";
         } else {
-            document.getElementById("result").innerHTML = "alle Rollen wurden vergeben!";
+            document.getElementById("result").innerHTML = "Alle Rollen wurden vergeben!";
         }
     }
 

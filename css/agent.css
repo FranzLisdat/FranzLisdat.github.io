@@ -23,7 +23,7 @@ body {
 }
 
 .navbar {
-  background: #ffffff;
+  background: #f7f4f4;
   padding: 1em;
 }
 
@@ -83,6 +83,8 @@ section {
 .hero button {
   color: white;
   border-radius: 1em;
+  font-family: "Poppins";
+  font-weight: bold;
   padding: 1em 2em 1em 2em;
   cursor: pointer;
 }
