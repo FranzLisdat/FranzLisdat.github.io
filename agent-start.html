@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franz Lisdat</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-    <script type="text/javascript" src="js/agent-start.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Franz Lisdat</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+        <script type="text/javascript" src="js/agent-start.js"></script>
 
-</head>
-<body>
-    <div id="nav-placeholder"></div>
-    <script> $("#nav-placeholder").load("nav.html");
-    </script>
-    <section class="main-section-agent-start">
-        <h1><span id="game-instructions"></span></h1>
-        <h3><span id="players-left-text"></span></h3>
-    </section>
-
-    <div class="main-part-agent-start" id="main-part-id">
-        <div class="game-info-fields" id="wrapperId">
-            <ul>
-                <li>Ort : <span id="spiel-ort"></span></li>
-                <li>Rolle : <span id="textfeld"></span></li> 
-            </ul>
-            <button type="button" id="weiter-button" class="weiter-button" value="Click" >Weiter</button></li>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script> $("#nav-placeholder").load("nav.html");</script>
+        <section class="main-section-agent-start">
+            <h1><span id="game-instructions"></span></h1>
+            <h3><span id="players-left-text"></span></h3>
+        </section>
+        <div class="main-part-agent-start" id="main-part-id">
+            <div class="game-info-fields" id="wrapperId">
+                <ul>
+                    <li>Ort : <span id="spiel-ort"></span></li>
+                    <li>Rolle : <span id="textfeld"></span></li> 
+                </ul>
+                <button type="button" id="weiter-button" class="weiter-button" value="Click" >Weiter</button></li>
+            </div>
         </div>
-    </div>
-        
         <div class="countDown">
             <p id="demo"></p>
         </div>
@@ -39,7 +36,5 @@
             </a>
             <button type="button" id="start-timer-button" class="start-button hidden"  value="Click" >Start!</button></li>
         </div>
-    
-</body>
-
+    </body>
 </html>

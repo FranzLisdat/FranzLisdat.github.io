@@ -20,49 +20,50 @@
         </nav>
     </div>
 </div>
+
 <script>
+    // fürs highlighten des Textes im Nav
+    var path = window.location.pathname;
 
-// fürs highlighten des Textes im Nav
-var path = window.location.pathname;
-if (path == "/index.html"){
-    document.getElementById("index").classList.add("current");
-} else if (path == "/agent.html" || path == "/agent-optionen.html" || path == "/agent-start.html") {
-    document.getElementById("agent").classList.add("current");
-}
+    if (path == "/index.html"){
+        document.getElementById("index").classList.add("current");
+    } else if (path == "/agent.html" || path == "/agent-optionen.html" || path == "/agent-start.html") {
+        document.getElementById("agent").classList.add("current");
+    }
 
 
-// DarkMode
-document.getElementById("light-dark-button").onclick = startFunktion;
-const darkmode = new Darkmode;
+    // DarkMode
+    document.getElementById("light-dark-button").onclick = startFunktion;
+    const darkmode = new Darkmode;
 
-if (darkmode.isActivated()) {
-    document.getElementById("mobile-menu-burger-button").classList.add("custom-darkmode");
-    document.getElementById("nav-id").classList.add("custom-darkmode");
-} else {
-    document.getElementById("mobile-menu-burger-button").classList.remove("custom-darkmode");
-    document.getElementById("nav-id").classList.remove("custom-darkmode");
-}
-function startFunktion(){
     if (darkmode.isActivated()) {
-        document.getElementById("mobile-menu-burger-button").classList.remove("custom-darkmode");
-        document.getElementById("nav-id").classList.remove("custom-darkmode");
-    } else {
         document.getElementById("mobile-menu-burger-button").classList.add("custom-darkmode");
         document.getElementById("nav-id").classList.add("custom-darkmode");
+    } else {
+        document.getElementById("mobile-menu-burger-button").classList.remove("custom-darkmode");
+        document.getElementById("nav-id").classList.remove("custom-darkmode");
     }
-        darkmode.toggle();
-}
+    function startFunktion(){
+        if (darkmode.isActivated()) {
+            document.getElementById("mobile-menu-burger-button").classList.remove("custom-darkmode");
+            document.getElementById("nav-id").classList.remove("custom-darkmode");
+        } else {
+            document.getElementById("mobile-menu-burger-button").classList.add("custom-darkmode");
+            document.getElementById("nav-id").classList.add("custom-darkmode");
+        }
+            darkmode.toggle();
+    }
 
-// Mobile Button öffnen/schließen
-const mobileBtn = document.getElementById("mobile-menu-burger-button");
-nav = document.querySelector("nav"); // does the same but without the ID
-mobileBtnExit = document.getElementById("mobile-exit");
+    // Mobile Button öffnen/schließen
+    const mobileBtn = document.getElementById("mobile-menu-burger-button");
+    nav = document.querySelector("nav"); // does the same but without the ID
+    mobileBtnExit = document.getElementById("mobile-exit");
 
-mobileBtn.addEventListener("click", () => {
-    nav.classList.add("show-mobile-nav");
-})
+    mobileBtn.addEventListener("click", () => {
+        nav.classList.add("show-mobile-nav");
+    })
 
-mobileBtnExit.addEventListener("click", () => {
-    nav.classList.remove("show-mobile-nav");
-})
+    mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("show-mobile-nav");
+    })
 </script>
