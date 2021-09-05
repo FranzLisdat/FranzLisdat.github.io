@@ -45,7 +45,7 @@ p {
   color: red;
   font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
-  margin: 1em 0em;
+  margin: .5em 0em;
 }
 
 .navbar {
@@ -57,9 +57,10 @@ p {
   text-decoration: none;
   font-weight: bold;
   color: black;
+  font-size: 160%;
 }
 
-.navbar span {
+.navbar .logo .logoLisdat {
   color: var(--primary-color);
 }
 
@@ -165,14 +166,15 @@ section {
   cursor: pointer;
   background-color: #020285;
   font-size: 300%;
+  margin-top: 1em;
 }
 
 .neustart .start-button {
   background-color: #1f1f1f;
   color: red;
-  padding: .5em 1em .5em 1em;
-  font-size: 300%;
   border-radius: 1em;
+  font-size: 300%;
+  padding: 1em 2em 1em 2em;
   font-style: normal;
   cursor: pointer;
 }
@@ -186,7 +188,7 @@ section {
 
 .optionen {
   text-align: center;
-  padding: 3em 2em;
+  padding: 1em 2em;
 }
 
 .optionen li {
@@ -296,6 +298,11 @@ nav li .light-dark-button:hover {
   cursor: pointer;
 }
 
+.custom-darkmode {
+  -webkit-filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+          filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+}
+
 @media only screen and (min-width: 768px) {
   .mobile-menu, .mobile-menu-exit {
     display: none;
@@ -307,17 +314,31 @@ nav li .light-dark-button:hover {
         grid-template-columns: 180px auto;
   }
   .navbar nav {
+    font-size: 130%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     background: none;
     position: unset;
     height: auto;
     width: 100%;
     padding: 0;
+  }
+  .navbar nav .light-dark-button {
+    all: initial;
+    color: black;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 110%;
+    font-family: "Poppins";
+  }
+  .navbar nav .light-dark-button * {
+    all: unset;
+  }
+  .navbar nav .light-dark-button:hover {
+    font-weight: bold;
   }
   .navbar nav ul {
     display: -webkit-box;
@@ -338,26 +359,15 @@ nav li .light-dark-button:hover {
 }
 
 @media only screen and (min-width: 1080px) {
-  .light-dark-button {
-    font-family: "Poppins";
-    background: #ffffff;
-    font-size: 1em;
-    cursor: pointer;
-    background: none;
-    border: none;
-  }
-  .light-dark-button:hover {
-    font-weight: bold;
-  }
   .navbar .logo {
-    font-size: 130%;
+    font-size: 160%;
   }
   .container {
     width: 1080px;
     margin: 0 auto;
   }
   section {
-    padding: 10em 4em;
+    padding: 4em 4em 1em 4em;
   }
   .hero .container {
     display: -webkit-box;

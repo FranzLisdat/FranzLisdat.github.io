@@ -42,20 +42,21 @@ p {
         color:red;
         font-family: 'Courier New', Courier, monospace;
         font-size: 2em;
-        margin: 1em 0em;
+        margin: .5em 0em;
     }
 }
 .navbar {
     background: #ffffff;
     padding: 1em;
-
+    
     .logo{
         text-decoration: none; //removes underscores and the "hyperlink" glow etc
         font-weight: bold;
         color: rgb(0, 0, 0);
-    }
-    span{
-        color: var(--primary-color);
+        font-size: 160%;
+        .logoLisdat {
+            color: var(--primary-color);
+        }
     }
     nav {
         display:none;
@@ -68,6 +69,7 @@ p {
     }
     .mobile-menu{
         cursor: pointer;
+        
     }
 }
 
@@ -155,13 +157,14 @@ section {
         cursor: pointer;
         background-color: rgb(2, 2, 133);
         font-size: 300%;
+        margin-top: 1em;
     }
     .start-button{
         background-color: rgb(31, 31, 31);
         color: red;
-        padding: .5em 1em .5em 1em;
-        font-size: 300%;
         border-radius: 1em;
+        font-size: 300%;
+        padding: 1em 2em 1em 2em;
         font-style: normal;
         cursor: pointer;
     }
@@ -175,7 +178,7 @@ section {
 }
 .optionen {
     text-align: center;
-    padding: 3em 2em;
+    padding: 1em 2em;
 
     li {
         padding: 1em;
@@ -282,8 +285,13 @@ nav {
     cursor:pointer;
 }
 
+.custom-darkmode {
+    filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+}
 // ab 768px (Tablet size)
 @media only screen and (min-width: 768px) {
+
+
 
     .mobile-menu, .mobile-menu-exit{
         display:none;
@@ -297,52 +305,60 @@ nav {
     }
 
     .navbar nav {
+    font-size: 130%;
     display:flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     background:none;
     position:unset;
     height:auto;
     width: 100%;
     padding:0;
 
+    .light-dark-button{
+        all: initial; 
+       * {
+            all:unset;
+        }
+        color:black;
+        text-decoration: none;
+        display:flex;
+        font-size: 110%;
+        font-family: "Poppins";
+        &:hover {
+            font-weight:bold;
+        }
+    }
+
         ul {
         display:flex; 
-        }
+    }
     
-        a {
-            color:black;
-            padding: .1em 1em;
-            font-size: 1em;
-        }
-
-        ul.primary-nav {
+    a {
+        color:black;
+        padding: .1em 1em;
+        font-size: 1em;
+    }
+    
+    ul.primary-nav {
             margin:0;
         }
 
         li.current a {
             font-weight:bold;
-        }     
+        }
+
+
+        
     }
 }
-
 // PC size
 @media only screen and (min-width: 1080px) {
 
-    .light-dark-button{
-        font-family: "Poppins";
-        background: #ffffff;
-        font-size: 1em;
-        cursor: pointer;
-        background:none;
-        border:none;
-        &:hover {
-            font-weight:bold;
-        }
-    }
+
     .navbar {
 
         .logo {
-            font-size: 130%;
+            font-size: 160%;
         }
     }
     .container {
@@ -351,7 +367,7 @@ nav {
     }
 
     section {
-        padding: 10em 4em;
+        padding: 4em 4em 1em 4em;
     }
 
     .hero .container {

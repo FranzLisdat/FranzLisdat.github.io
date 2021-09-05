@@ -192,6 +192,11 @@ nav.menu-btn {
   display: block;
 }
 
+.custom-darkmode {
+  -webkit-filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+          filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+}
+
 nav {
   position: fixed;
   z-index: 999;

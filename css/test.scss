@@ -187,7 +187,9 @@ iframe {
 nav.menu-btn {
     display:block;
 }
-
+.custom-darkmode {
+    filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
+}
 nav {
     position:fixed; //even when scrolling stays at the position
     z-index:999; // stays on the highest layer, "above" everything else
