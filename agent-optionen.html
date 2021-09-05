@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franz Lisdat</title>
-    <link rel="stylesheet" href="css/agent-optionen.css">
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-    <script type="text/javascript" src="js/agent-optionen.js"></script>
-    
-    
-</head>
-<body>
-    <div id="nav-placeholder"></div>
-    <script> $("#nav-placeholder").load("nav.html");
-    </script>
-    <section class="optionen">
-        <h1 id="einstellungen-h1">Einstellungen :</h1>
-        <form class="anzahl-spieler" action="agent-start.html">
-            <ul>  
-                <li>
-                    <h1>Spieleranzahl  (3- 13)</span></h1>
-                    <div class="slidecontainer-spielerAnzahl">
-                    <p><span id="Spieleranzahl"></span> Spieler</p>
-                    <input type="range" min="3" max="13" value="3" class="slider" id="spieler-slider">
-                    </div>
-                </li>
-                <li>
-                    <h1>Zeit für den Agenten</h1>
-                    <div class="slidecontainer-zeit">
-                    <p><span id="Zeit"></span> min</p>
-                    <input type="range" min="5" max="12" value="3" class="slider" id="zeit-slider">
-                    </div>
-                </li>
-                    <input type="submit" id="speichern-input" class="einstellungen-button" value="Speichern" />
-            </ul>
-        </form>
-    </section>
-    
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Franz Lisdat</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+        <script type="text/javascript" src="js/agent-optionen.js"></script>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script> $("#nav-placeholder").load("nav.html");</script>
+        <section class="main-section-options">
+            <h1 id="heading-options">Einstellungen :</h1>
+            <form class="form-agent-options" action="agent-start.html">
+                <ul>  
+                    <li>
+                        <h1 class="heading-player-amount">Spieleranzahl  (3- 13)</span></h1>
+                        <div class="slidecontainer-spielerAnzahl">
+                        <p><span id="Spieleranzahl"></span> Spieler</p>
+                        <input type="range" min="3" max="13" value="3" class="slider" id="spieler-slider">
+                        </div>
+                    </li>
+                    <li>
+                        <h1 class="heading-time-amount">Zeit für den Agenten</h1>
+                        <div class="slidecontainer-zeit">
+                        <p><span id="Zeit"></span> min</p>
+                        <input type="range" min="5" max="12" value="3" class="slider" id="zeit-slider">
+                        </div>
+                    </li>
+                        <input type="submit" id="speichern-input" class="button-agent-options" value="Speichern" />
+                </ul>
+            </form>
+        </section> 
+    </body>
 </html>

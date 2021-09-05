@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 
+// main css for all sites    ------------------------------------
 :root{
  --primary-color:#142c95;
 }
@@ -9,7 +10,6 @@ body{
     margin:0;
     font-family: "Poppins";
 }
-
 
 .navbar {
     background: #f7f4f4;
@@ -28,7 +28,7 @@ body{
         display:none;
     }
     
-    .container {
+    .container-nav {
         display:flex;
         place-content: space-between;
     
@@ -43,158 +43,13 @@ body{
     filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
 }
 
-a {
-    color:#949ef8
-}
 
-ul {
-    list-style-type: none;
-    margin:0;
-    padding:0;
-}
-
-section {
-    padding: 5em 2em;
-}
-
-.hero {
-    text-align: center;
-}
-
-.left-col {
-
-    .subhead {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: gray;
-        letter-spacing: .3em;
-    }
-
-    h1 {
-        font-size:2.5em; 
-    }
-
-    .primary-cta {
-        background: var(--primary-color);
-        color:white;
-        text-decoration:none;
-        padding: .6em 1.3em;
-        font-size: 1.4em;
-        border-radius: 5em;
-        font-weight: bold;
-        display: inline-block;
-    }
-    .watch-video-cta {
-        display:block;
-        margin: 1em;
-    }
-    img {
-        margin-right: .5em;
-    }
-}
-
-.hero-img {
-    width:70%;
-    margin-top:3em;
-}
-
-section.features-section {
-    background: #120d38;
-    color: white;
-}
-
-ul.features-list {
-    margin: 0;
-    padding-left:.1em;
-    display:grid;
-
-    li {
-        font-size: 1.1em;
-        margin-bottom:1em;
-        margin-left:2em;
-        position:relative;
-
-        &:before {
-            content: "";
-            left:-2em;
-            position:absolute;
-            width: 20px;
-            height:20px;
-            background-image:url("../images/bullet.svg");
-            background-size:contain;
-            margin-right:.5em;
-        }
-    }
-}
-
-.features-section img {
-    display:none;
-}
-
-.testimonails-section  {
-    background: var(--primary-color);
-    color: white;
-
-    li {
-        background: #006BD6;
-        text-align:center;
-        padding: 2em 1em;
-        width: 80%;
-        margin: 0 auto 5em auto;
-        border-radius: 1em;
-
-        img {
-            width:5em;
-            height:5em;
-            border: 5x solid #006BD6;
-            border-radius:50%;
-            margin-top: -4.5em;
-        }
-    }
-}
-
-h2 {
-    font-size: 2em;
-}
-
-label {
-    display:block;
-    font-size:1.2em;
-    margin-bottom: .5em;
-}
-
-input, textarea {
-    width:100%;
-    padding: .8em;
-    margin-bottom: 1em;
-    border-radius: .3em;
-    border: 1px solid gray;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight:bold;
-    font-size: 1.3em;
-    border:none;
-    margin-bottom:5em;
-    border-radius: 5em;
-    display: inline-block;
-    padding: .8em 2em;
-    width: unset;
-    cursor: pointer;
-}
-
-iframe {
-    width:100%;
-    height:300px;
-}
-
-nav.menu-btn {
+// make the invisible menu -> visible
+nav.show-mobile-nav {
     display:block;
 }
 
+// the menu that appears when you click the burger-menu
 nav {
     position:fixed; //even when scrolling stays at the position
     z-index:999; // stays on the highest layer, "above" everything else
@@ -248,8 +103,266 @@ nav {
     margin: .5em;
     cursor:pointer;
 }
+// removes the dots for every entry in a list
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
 
-// ab 768px (Tablet size)
+// until here general stuff ----------------------------------------------
+
+// CSS for index site ----------------------------------------------
+.main-section-index {
+    text-align: center;
+    padding: 5em 2em;
+}
+
+.left-col-index {
+
+    .subhead {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: gray;
+        letter-spacing: .3em;
+    }
+
+    h1 {
+        font-size:2.5em; 
+    }
+
+    .primary-cta {
+        background: var(--primary-color);
+        color:white;
+        text-decoration:none;
+        padding: .6em 1.3em;
+        font-size: 1.4em;
+        border-radius: 5em;
+        font-weight: bold;
+        display: inline-block;
+    }
+    .watch-video-cta {
+        display:block;
+        margin: 1em;
+    }
+    img {
+        margin-right: .5em;
+    }
+}
+
+.main-section-img {
+    width:70%;
+    margin-top:3em;
+}
+
+// CSS for agent site ----------------------------------------------
+
+.main-section-index {
+    text-align: center;
+    
+    .heading-agent {
+        font-size: 250%;
+    }
+    .heading-span-agent {
+        color:rgb(94, 94, 94);
+        font-size:70%;
+    }
+    
+    .game-start-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 200%;
+        color: white;
+        border-radius: 1em;
+        font-family: "Poppins";
+        font-weight: bold;
+        padding: 1em 2em 1em 2em;
+        cursor: pointer;
+    }
+    .heading-2-agent {
+
+    }
+    li {
+        padding: 1em;
+    }
+}
+
+// CSS for agent-option site ----------------------------------------------
+
+.main-section-options {
+    text-align: center;
+    padding: 1em .5em;
+
+    .form-agent-options{
+    
+        ul {
+            li {
+                .heading-player-amount, .heading-time-amount {
+                    margin:0;
+                }
+            }
+        }
+    }
+    .spieler-anzahl-schrift {
+        font-size: 80%;
+    }
+    li {
+        padding: 1em;
+        background-color:#f5f5f5;
+        border-radius: 1em;
+        margin: .5em 1em;
+        padding: .5em;
+
+        .heading-options .heading-player-amount .heading-time-amount{
+            margin:0;
+        }
+    }
+  
+   
+    p {
+        font-size: 3em;
+        font-weight:bold;
+        padding: .3em;
+        margin:0;
+    }
+    h1 {
+        font-size: 200%;
+        span {
+            font-size: 60%;
+        }
+    }
+    .slider {
+        width: 50%;
+    }
+}
+
+#heading-options{
+    font-size: 280%;
+    color: #a00000;
+    font-weight: bold;
+    margin:.3em;
+}
+
+.button-agent-options {
+    color: white;
+    border-radius: 1em;
+    font-family: "Poppins";
+    padding: 1em 2em 1em 2em;
+    cursor: pointer;
+    background-color: rgb(2, 2, 133);
+    font-size: 200%; 
+    font-weight: bold;
+    margin-top:.3em;
+}
+
+// CSS for agent-start site ----------------------------------------------
+
+.main-section-agent-start {
+    text-align: center;
+    
+    p {
+        font-size: 3em;
+        font-weight:bold;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#game-instructions {
+    color: rgb(160, 0, 0);
+    font-size: 200%;
+
+}
+
+.main-part-agent-start {
+    text-align: center;
+    padding: .5em 1em;
+    button {
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        padding: 1em 1.5em 1em 1.5em;
+        cursor: pointer;
+    }
+    .bestätigen-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+    }
+}
+
+.game-info-fields {
+    
+    li {
+        padding: 2em;
+    
+    }
+    ul {
+        text-align: left;
+        font-size: 150%;
+        font-weight: bold;
+    }   
+
+    li {
+        background:rgb(233, 233, 233);
+        border-style: solid;
+        border-radius: 1em;
+        margin-bottom: 1em;
+    }
+    button {
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        cursor: pointer;
+    }
+    .weiter-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+        font-family: "Poppins";
+        font-weight: bold;
+    }
+}
+
+.hidden {
+    display:none;
+}
+
+.button-section-agent-start{
+    text-align: center;
+    padding: 2em;
+
+    .play-again-button{
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        padding: .5em 1em .5em 1em;
+        cursor: pointer;
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+    }
+    .start-button{
+        background-color: rgb(31, 31, 31);
+        color: red;
+        border-radius: 1em;
+        font-size: 300%;
+        padding: 1em 2em 1em 2em;
+        font-family: "Poppins";
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.countDown{
+    #demo {
+        color:red;
+        font-family: 'Courier New', Courier, monospace;
+        margin: .5em 0em;
+        text-align: center;
+        font-size: 5em;
+    }
+}
+
+// ab 768px (Tablet size) --------------------------------
 @media only screen and (min-width: 768px) {
 
 
@@ -258,7 +371,7 @@ nav {
         display:none;
     }
 
-    .navbar .container {
+    .navbar .container-nav {
         display:grid;
         grid-template-columns: 180px auto;
         
@@ -313,7 +426,7 @@ nav {
     }
 }
 
-// PC size
+// PC size --------------------------------
 @media only screen and (min-width: 1080px) {
 
 
@@ -323,7 +436,7 @@ nav {
             font-size: 160%;
         }
     }
-    .container {
+    .container-nav {
         width: 1080px;
         margin: 0 auto;
     }
@@ -332,12 +445,12 @@ nav {
         padding: 10em 4em;
     }
 
-    .hero .container {
+    .main-section-index .container-nav {
         display: flex;
         justify-content:space-between;
         text-align: left;
 
-        .left-col {
+        .left-col-index {
             margin: 3em 3em 0 5em;
 
             h1 {
@@ -353,11 +466,3 @@ nav {
     }
 }
 
-footer{
-
-   background-color: var(--primary-color);
-    
-   p {
-       color: var(--primary-color);
-   }
-}

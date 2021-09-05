@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap");
 :root {
   --primary-color:#142c95;
@@ -29,7 +30,7 @@ body {
   display: none;
 }
 
-.navbar .container {
+.navbar .container-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,156 +46,7 @@ body {
           filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
 }
 
-a {
-  color: #949ef8;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-section {
-  padding: 5em 2em;
-}
-
-.hero {
-  text-align: center;
-}
-
-.left-col .subhead {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: gray;
-  letter-spacing: .3em;
-}
-
-.left-col h1 {
-  font-size: 2.5em;
-}
-
-.left-col .primary-cta {
-  background: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  padding: .6em 1.3em;
-  font-size: 1.4em;
-  border-radius: 5em;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.left-col .watch-video-cta {
-  display: block;
-  margin: 1em;
-}
-
-.left-col img {
-  margin-right: .5em;
-}
-
-.hero-img {
-  width: 70%;
-  margin-top: 3em;
-}
-
-section.features-section {
-  background: #120d38;
-  color: white;
-}
-
-ul.features-list {
-  margin: 0;
-  padding-left: .1em;
-  display: -ms-grid;
-  display: grid;
-}
-
-ul.features-list li {
-  font-size: 1.1em;
-  margin-bottom: 1em;
-  margin-left: 2em;
-  position: relative;
-}
-
-ul.features-list li:before {
-  content: "";
-  left: -2em;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/bullet.svg");
-  background-size: contain;
-  margin-right: .5em;
-}
-
-.features-section img {
-  display: none;
-}
-
-.testimonails-section {
-  background: var(--primary-color);
-  color: white;
-}
-
-.testimonails-section li {
-  background: #006BD6;
-  text-align: center;
-  padding: 2em 1em;
-  width: 80%;
-  margin: 0 auto 5em auto;
-  border-radius: 1em;
-}
-
-.testimonails-section li img {
-  width: 5em;
-  height: 5em;
-  border: 5x solid #006BD6;
-  border-radius: 50%;
-  margin-top: -4.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-label {
-  display: block;
-  font-size: 1.2em;
-  margin-bottom: .5em;
-}
-
-input, textarea {
-  width: 100%;
-  padding: .8em;
-  margin-bottom: 1em;
-  border-radius: .3em;
-  border: 1px solid gray;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-input[type="submit"] {
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  font-size: 1.3em;
-  border: none;
-  margin-bottom: 5em;
-  border-radius: 5em;
-  display: inline-block;
-  padding: .8em 2em;
-  width: unset;
-  cursor: pointer;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
-}
-
-nav.menu-btn {
+nav.show-mobile-nav {
   display: block;
 }
 
@@ -252,11 +104,254 @@ nav li .light-dark-button:hover {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-section-index {
+  text-align: center;
+  padding: 5em 2em;
+}
+
+.left-col-index .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: .3em;
+}
+
+.left-col-index h1 {
+  font-size: 2.5em;
+}
+
+.left-col-index .primary-cta {
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: .6em 1.3em;
+  font-size: 1.4em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.left-col-index .watch-video-cta {
+  display: block;
+  margin: 1em;
+}
+
+.left-col-index img {
+  margin-right: .5em;
+}
+
+.main-section-img {
+  width: 70%;
+  margin-top: 3em;
+}
+
+.main-section-index {
+  text-align: center;
+}
+
+.main-section-index .heading-agent {
+  font-size: 250%;
+}
+
+.main-section-index .heading-span-agent {
+  color: #5e5e5e;
+  font-size: 70%;
+}
+
+.main-section-index .game-start-button {
+  background-color: #020285;
+  font-size: 200%;
+  color: white;
+  border-radius: 1em;
+  font-family: "Poppins";
+  font-weight: bold;
+  padding: 1em 2em 1em 2em;
+  cursor: pointer;
+}
+
+.main-section-index li {
+  padding: 1em;
+}
+
+.main-section-options {
+  text-align: center;
+  padding: 1em .5em;
+}
+
+.main-section-options .form-agent-options ul li .heading-player-amount, .main-section-options .form-agent-options ul li .heading-time-amount {
+  margin: 0;
+}
+
+.main-section-options .spieler-anzahl-schrift {
+  font-size: 80%;
+}
+
+.main-section-options li {
+  padding: 1em;
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  margin: .5em 1em;
+  padding: .5em;
+}
+
+.main-section-options li .heading-options .heading-player-amount .heading-time-amount {
+  margin: 0;
+}
+
+.main-section-options p {
+  font-size: 3em;
+  font-weight: bold;
+  padding: .3em;
+  margin: 0;
+}
+
+.main-section-options h1 {
+  font-size: 200%;
+}
+
+.main-section-options h1 span {
+  font-size: 60%;
+}
+
+.main-section-options .slider {
+  width: 50%;
+}
+
+#heading-options {
+  font-size: 280%;
+  color: #a00000;
+  font-weight: bold;
+  margin: .3em;
+}
+
+.button-agent-options {
+  color: white;
+  border-radius: 1em;
+  font-family: "Poppins";
+  padding: 1em 2em 1em 2em;
+  cursor: pointer;
+  background-color: #020285;
+  font-size: 200%;
+  font-weight: bold;
+  margin-top: .3em;
+}
+
+.main-section-agent-start {
+  text-align: center;
+}
+
+.main-section-agent-start p {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.main-section-agent-start h3 {
+  margin: 0;
+}
+
+#game-instructions {
+  color: #a00000;
+  font-size: 200%;
+}
+
+.main-part-agent-start {
+  text-align: center;
+  padding: .5em 1em;
+}
+
+.main-part-agent-start button {
+  color: white;
+  border-radius: 1em;
+  font-style: normal;
+  padding: 1em 1.5em 1em 1.5em;
+  cursor: pointer;
+}
+
+.main-part-agent-start .bestätigen-button {
+  background-color: #020285;
+  font-size: 300%;
+}
+
+.game-info-fields li {
+  padding: 2em;
+}
+
+.game-info-fields ul {
+  text-align: left;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.game-info-fields li {
+  background: #e9e9e9;
+  border-style: solid;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.game-info-fields button {
+  color: white;
+  border-radius: 1em;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.game-info-fields .weiter-button {
+  background-color: #020285;
+  font-size: 300%;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-section-agent-start {
+  text-align: center;
+  padding: 2em;
+}
+
+.button-section-agent-start .play-again-button {
+  color: white;
+  border-radius: 1em;
+  font-style: normal;
+  padding: .5em 1em .5em 1em;
+  cursor: pointer;
+  background-color: #020285;
+  font-size: 300%;
+}
+
+.button-section-agent-start .start-button {
+  background-color: #1f1f1f;
+  color: red;
+  border-radius: 1em;
+  font-size: 300%;
+  padding: 1em 2em 1em 2em;
+  font-family: "Poppins";
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.countDown #demo {
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  margin: .5em 0em;
+  text-align: center;
+  font-size: 5em;
+}
+
 @media only screen and (min-width: 768px) {
   .mobile-menu, .mobile-menu-exit {
     display: none;
   }
-  .navbar .container {
+  .navbar .container-nav {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 180px auto;
@@ -311,14 +406,14 @@ nav li .light-dark-button:hover {
   .navbar .logo {
     font-size: 160%;
   }
-  .container {
+  .container-nav {
     width: 1080px;
     margin: 0 auto;
   }
   section {
     padding: 10em 4em;
   }
-  .hero .container {
+  .main-section-index .container-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -327,10 +422,10 @@ nav li .light-dark-button:hover {
             justify-content: space-between;
     text-align: left;
   }
-  .hero .container .left-col {
+  .main-section-index .container-nav .left-col-index {
     margin: 3em 3em 0 5em;
   }
-  .hero .container .left-col h1 {
+  .main-section-index .container-nav .left-col-index h1 {
     font-size: 3em;
     width: 90%;
   }
@@ -338,13 +433,5 @@ nav li .light-dark-button:hover {
     width: 30%;
     margin-right: 8em;
   }
-}
-
-footer {
-  background-color: var(--primary-color);
-}
-
-footer p {
-  color: var(--primary-color);
 }
 /*# sourceMappingURL=main.css.map */

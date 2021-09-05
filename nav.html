@@ -1,10 +1,10 @@
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <div class="navbar">
-    <div class="container" >
+    <div class="container-nav" >
         <a class="logo" href="index.html">Franz <span class="logoLisdat">Lisdat</span></a>
 
-        <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="open-navigation">
+        <img id="mobile-menu-burger-button" class="mobile-menu" src="images/menu.svg" alt="open-navigation">
       
         <nav id="nav-id">
             <img src="images/exit.svg" id="mobile-exit" class="mobile-menu-exit" alt="exit-navigation">
@@ -20,53 +20,50 @@
         </nav>
     </div>
 </div>
+
 <script>
-// Versucht JS in eigenen Dokument zu packen aber es gab Fehler bei der Reihenfolge des Ladens der Daten wodurch zb. getElementById nicht funktioniert hat
+    // fürs highlighten des Textes im Nav
+    var path = window.location.pathname;
 
-// fürs highlighten des Textes im Nav
-var path = window.location.pathname;
-if (path == "/index.html"){
-    document.getElementById("index").classList.add("current");
-} else if (path == "/agent.html" || path == "/agent-optionen.html" || path == "/agent-start.html") {
-    document.getElementById("agent").classList.add("current");
-}
-
-
-// DarkMode
-document.getElementById("light-dark-button").onclick = startFunktion;
-const darkmode = new Darkmode;
-
-if (darkmode.isActivated()) {
-    document.getElementById("mobile-cta").classList.add("custom-darkmode");
-    document.getElementById("nav-id").classList.add("custom-darkmode");
-} else {
-    document.getElementById("mobile-cta").classList.remove("custom-darkmode");
-    document.getElementById("nav-id").classList.remove("custom-darkmode");
-}
-function startFunktion(){
-    if (document.getElementById("mobile-cta").classList.contains("custom-darkmode")){
-        document.getElementById("mobile-cta").classList.remove("custom-darkmode");
-        document.getElementById("nav-id").classList.remove("custom-darkmode");
-
-    } else {
-        document.getElementById("mobile-cta").classList.add("custom-darkmode");
-        document.getElementById("nav-id").classList.add("custom-darkmode");
-
+    if (path == "/index.html"){
+        document.getElementById("index").classList.add("current");
+    } else if (path == "/agent.html" || path == "/agent-optionen.html" || path == "/agent-start.html") {
+        document.getElementById("agent").classList.add("current");
     }
-    console.log("Start Button gedrückt!")
-    darkmode.toggle();
-}
 
-// Mobile Button öffnen/schließen
-const mobileBtn = document.getElementById("mobile-cta");
-nav = document.querySelector("nav"); // does the same but without the ID
-mobileBtnExit = document.getElementById("mobile-exit");
 
-mobileBtn.addEventListener("click", () => {
-    nav.classList.add("menu-btn");
-})
+    // DarkMode
+    document.getElementById("light-dark-button").onclick = startFunktion;
+    const darkmode = new Darkmode;
 
-mobileBtnExit.addEventListener("click", () => {
-    nav.classList.remove("menu-btn");
-})
+    if (darkmode.isActivated()) {
+        document.getElementById("mobile-menu-burger-button").classList.add("custom-darkmode");
+        document.getElementById("nav-id").classList.add("custom-darkmode");
+    } else {
+        document.getElementById("mobile-menu-burger-button").classList.remove("custom-darkmode");
+        document.getElementById("nav-id").classList.remove("custom-darkmode");
+    }
+    function startFunktion(){
+        if (darkmode.isActivated()) {
+            document.getElementById("mobile-menu-burger-button").classList.remove("custom-darkmode");
+            document.getElementById("nav-id").classList.remove("custom-darkmode");
+        } else {
+            document.getElementById("mobile-menu-burger-button").classList.add("custom-darkmode");
+            document.getElementById("nav-id").classList.add("custom-darkmode");
+        }
+            darkmode.toggle();
+    }
+
+    // Mobile Button öffnen/schließen
+    const mobileBtn = document.getElementById("mobile-menu-burger-button");
+    nav = document.querySelector("nav"); // does the same but without the ID
+    mobileBtnExit = document.getElementById("mobile-exit");
+
+    mobileBtn.addEventListener("click", () => {
+        nav.classList.add("show-mobile-nav");
+    })
+
+    mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("show-mobile-nav");
+    })
 </script>
