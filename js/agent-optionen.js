@@ -1,6 +1,5 @@
 
 $(document).ready(function(){      
-    
     document.getElementById("speichern-input").onclick = passValues;
     function passValues() 
         {
@@ -10,8 +9,17 @@ $(document).ready(function(){
             var zeitFuersSpiel = document.getElementById("zeit-slider").value;
             localStorage.setItem("zeitValue",zeitFuersSpiel);
             
-            location.href = "agent-start.html"
+            
         }
+
+        // Fadeout für Formbutton
+        $('form').click(function(e){
+            redirect = $(this).attr('action');
+            e.preventDefault();      
+            $(document.getElementById("all-except-nav")).fadeOut(400, function(){
+                document.location.href = redirect
+            });
+        });
 
         var sliderSpieler = document.getElementById("spieler-slider");
         var outputsliderSpieler = document.getElementById("Spieleranzahl");
