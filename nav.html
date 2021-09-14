@@ -6,22 +6,46 @@
 
         <img id="mobile-menu-burger-button" class="mobile-menu" src="images/menu.svg" alt="open-navigation">
       
-        <nav id="nav-id">
+        <nav id="nav-id" class="hide-mobile-nav">
             <img src="images/exit.svg" id="mobile-exit" class="mobile-menu-exit" alt="exit-navigation">
-            <ul class="primary-nav">
-                <li id="index"><a href="/index.html">Home</a></li>
-                <li id="agent"><a href="/agent.html">Agent</a></li>
-                <li id="kontakt"><a href="/index.html">Kontakt</a></li>
-            </ul>
-            <ul class="secondary-nav">
-                <li><a href="index.html">DE/EN</a></li>
-                <li><button class="light-dark-button" id="light-dark-button">DarkMode</button></li>
-            </ul>
+            <div class="mobile-nav-both-sections"> 
+                <ul>
+                    <li>
+                        <ul class="primary-nav">
+                            <li id="index"><a href="/index.html">Home</a></li>
+                            <li id="agent"><a href="/agent.html">Agent</a></li>
+                            <li id="kontakt"><a href="/index.html">Kontakt</a></li>
+                        </ul>
+                    </li>
+                    <ul class="secondary-nav">
+                        <li><a href="index.html">DE/EN</a></li>
+                        <li><button class="light-dark-button" id="light-dark-button">DarkMode</button></li>
+                    </ul>
+                </ul>
+            </div>
         </nav>
     </div>
 </div>
 
 <script>
+
+    $('a').click(function(e){
+        redirect = $(this).attr('href');
+        e.preventDefault();
+        if (document.querySelector("nav").classList.contains("show-mobile-nav")){
+            document.querySelector("nav").classList.remove("show-mobile-nav");
+            document.querySelector("nav").classList.add("hide-mobile-nav");
+        }
+       
+        $(document.getElementById("all-except-nav")).fadeOut(400, function(){
+            document.location.href = redirect
+        });
+    });
+
+
+
+
+
     // fürs highlighten des Textes im Nav
     var path = window.location.pathname;
 
@@ -58,12 +82,14 @@
     const mobileBtn = document.getElementById("mobile-menu-burger-button");
     nav = document.querySelector("nav"); // does the same but without the ID
     mobileBtnExit = document.getElementById("mobile-exit");
-
+    
     mobileBtn.addEventListener("click", () => {
+        nav.classList.remove("hide-mobile-nav");
         nav.classList.add("show-mobile-nav");
     })
 
     mobileBtnExit.addEventListener("click", () => {
         nav.classList.remove("show-mobile-nav");
+        nav.classList.add("hide-mobile-nav");
     })
 </script>

@@ -26,10 +26,6 @@ body {
   color: var(--primary-color);
 }
 
-.navbar nav {
-  display: none;
-}
-
 .navbar .container-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,6 +35,8 @@ body {
 
 .navbar .mobile-menu {
   cursor: pointer;
+  height: 35px;
+  width: auto;
 }
 
 .custom-darkmode {
@@ -47,22 +45,35 @@ body {
 }
 
 nav.show-mobile-nav {
-  display: block;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav.hide-mobile-nav {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 nav {
   position: fixed;
   z-index: 999;
-  width: 66%;
+  width: 100%;
   right: 0;
   top: 0;
   background: #20272E;
   height: 100vh;
-  padding: 1em;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
-nav ul.primary-nav {
-  margin-top: 5em;
+nav .mobile-nav-both-sections {
+  padding: 8em;
+}
+
+nav img {
+  padding: 1em;
+  height: 35px;
+  width: auto;
 }
 
 nav li a {
@@ -70,8 +81,8 @@ nav li a {
   text-decoration: none;
   display: block;
   padding: .5em;
-  font-size: 1.3em;
-  text-align: right;
+  font-size: 2em;
+  text-align: center;
 }
 
 nav li a:hover {
@@ -82,12 +93,11 @@ nav li .light-dark-button {
   all: initial;
   color: white;
   text-decoration: none;
-  display: block;
-  padding: .5em;
-  font-size: 1.3em;
+  padding-top: .5em;
+  font-size: 2em;
   font-family: "Poppins";
   width: 95%;
-  text-align: right;
+  text-align: center;
 }
 
 nav li .light-dark-button * {
@@ -244,6 +254,7 @@ ul {
 
 .main-section-agent-start {
   text-align: center;
+  padding: 1em .5em;
 }
 
 .main-section-agent-start p {
@@ -348,6 +359,13 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
+  .main-section-agent-start {
+    padding: 2em;
+  }
+  nav.hide-mobile-nav {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
   .mobile-menu, .mobile-menu-exit {
     display: none;
   }
@@ -356,6 +374,9 @@ ul {
     display: grid;
     -ms-grid-columns: 180px auto;
         grid-template-columns: 180px auto;
+  }
+  .navbar .container-nav .mobile-nav-both-sections {
+    padding: 0em;
   }
   .navbar nav {
     font-size: 130%;
@@ -403,12 +424,22 @@ ul {
 }
 
 @media only screen and (min-width: 1080px) {
+  .main-section-agent-start {
+    padding: 2em;
+  }
+  nav.hide-mobile-nav {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
   .navbar .logo {
     font-size: 160%;
   }
   .container-nav {
     width: 1080px;
     margin: 0 auto;
+  }
+  .container-nav .mobile-nav-both-sections {
+    padding: 0em;
   }
   section {
     padding: 10em 4em;

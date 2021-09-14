@@ -55,38 +55,53 @@ $(document).ready(function(){
                     spielOrtString = "";
                 }
             // Update alle Infos auf der HTML
-            document.getElementById("weiter-button").innerHTML = weiterButtonText;
-            document.getElementById("game-instructions").innerHTML = anweisung;
-            document.getElementById("textfeld").innerHTML = rollenText;
-            document.getElementById("spiel-ort").innerHTML = spielOrtString;
-        //Alles hidden machen und Timer zeigen
+                $(document.getElementById("weiter-button")).animate({opacity:0})
+                $(document.getElementById("game-instructions")).animate({opacity:0})
+                $(document.getElementById("textfeld")).animate({opacity:0})
+                $(document.getElementById("spiel-ort")).animate({opacity:0})
+                document.getElementById("players-left-text").innerHTML = "noch : " + personen.person.length + " Rolle (n) zu vergeben!";
+
+
+            
+            setTimeout(function(){
+                document.getElementById("weiter-button").innerHTML = weiterButtonText;
+                document.getElementById("game-instructions").innerHTML = anweisung;
+                document.getElementById("textfeld").innerHTML = rollenText;
+                document.getElementById("spiel-ort").innerHTML = spielOrtString;
+
+                $(document.getElementById("weiter-button")).animate({opacity:1})
+                $(document.getElementById("game-instructions")).animate({opacity:1})
+                $(document.getElementById("textfeld")).animate({opacity:1})
+                $(document.getElementById("spiel-ort")).animate({opacity:1})
+            
+            },400);
+
+            //Alles hidden machen und Timer zeigen
         } else {
             anweisung = "Starte den Timer!"
             document.getElementById("game-instructions").innerHTML = anweisung;
-            hideText = document.getElementById("main-part-id");
-            hideText.classList.add("hidden");
-            showText = document.getElementById("start-timer-button");
-            showText.classList.remove("hidden");
-            document.getElementById("demo").innerHTML = zeitFuersSpiel + "m " + "0s ";
+            $(document.getElementById("main-part-id")).fadeOut(200);
+            setTimeout(function(e){
+                $(document.getElementById("start-timer-button")).fadeIn(200);
+                document.getElementById("demo").innerHTML = zeitFuersSpiel + "m " + "0s ";
+            },200)
+            document.getElementById("players-left-text").innerHTML = "Alle Rollen wurden vergeben!";
             
         }
-        verbleibeneSpieler = personen.person.length;
-        if (verbleibeneSpieler != 0){
-            document.getElementById("players-left-text").innerHTML = "noch : " + verbleibeneSpieler + " Rolle (n) zu vergeben!";
-        } else {
-            document.getElementById("players-left-text").innerHTML = "Alle Rollen wurden vergeben!";
-        }
     }
+    
+
 
 
     function startFunktion(){
         anweisung = "Timer läuft!!"
         document.getElementById("game-instructions").innerHTML = anweisung;
         document.getElementById("players-left-text").classList.add("hidden");
-        startButton = document.getElementById("start-timer-button");
-        startButton.classList.add("hidden");
+        $(document.getElementById("start-timer-button")).fadeOut(200);
         timer();
-        document.getElementById("play-again-button").classList.remove("hidden");
+        setTimeout(function(e){
+            $(document.getElementById("play-again-button")).fadeIn(200);
+        },200)
     }
 
     function timer(){
