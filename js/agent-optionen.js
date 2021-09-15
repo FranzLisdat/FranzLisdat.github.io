@@ -1,25 +1,22 @@
 
-$(document).ready(function(){      
-    document.getElementById("speichern-input").onclick = passValues;
-    function passValues() 
-        {
-            var anzahlDerSpieler = document.getElementById("spieler-slider").value;
-            localStorage.setItem("spielerValue",anzahlDerSpieler);
+$(document).ready(function(){   
 
-            var zeitFuersSpiel = document.getElementById("zeit-slider").value;
-            localStorage.setItem("zeitValue",zeitFuersSpiel);
-            
-            
-        }
+    $(document.getElementById("speichern-input")).click(function(e){
+        e.preventDefault();      
+        
+        var anzahlDerSpieler = document.getElementById("spieler-slider").value;
+        localStorage.setItem("spielerValue",anzahlDerSpieler);
+    
+        var zeitFuersSpiel = document.getElementById("zeit-slider").value;
+        localStorage.setItem("zeitValue",zeitFuersSpiel);
 
-        // Fadeout für Formbutton
-        $('form').click(function(e){
-            redirect = $(this).attr('action');
-            e.preventDefault();      
-            $(document.getElementById("all-except-nav")).fadeOut(400, function(){
-                document.location.href = redirect
-            });
+        $(document.getElementById("all-except-nav")).fadeOut(400, function(){
+            document.location.href = "agent-start.html";
         });
+    })
+
+
+
 
         var sliderSpieler = document.getElementById("spieler-slider");
         var outputsliderSpieler = document.getElementById("Spieleranzahl");
