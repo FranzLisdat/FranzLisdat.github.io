@@ -1,60 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 
+// main css for all sites    ------------------------------------
 :root{
  --primary-color:#142c95;
 }
 
 body{
-    background: #fdfafa;
+    background: #ffffff;
     margin:0;
     font-family: "Poppins";
+    
 }
 
 .navbar {
-    background: #ffffff;
+    background: #f7f4f4;
     padding: 1em;
-    
+
     .logo{
         text-decoration: none; //removes underscores and the "hyperlink" glow etc
         font-weight: bold;
         color: rgb(0, 0, 0);
+        font-size: 160%;
         .logoLisdat {
             color: var(--primary-color);
         }
     }
-    nav {
-        display:none;
-    }
+
     
-    .container {
+    .container-nav {
         display:flex;
         place-content: space-between;
     
     }
     .mobile-menu{
         cursor: pointer;
+        height:35px;
+        width:auto;
     }
 }
 
-a {
-    color:#949ef8
+.custom-darkmode {
+    filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
 }
 
+
+// make the invisible menu -> visible
+nav.show-mobile-nav {
+    transform: translateX(0);
+}
+
+nav.hide-mobile-nav{
+    transform:translateX(100%);
+}
+
+// the menu that appears when you click the burger-menu
+nav {
+    position: fixed; //even when scrolling stays at the position
+    z-index:999; // stays on the highest layer, "above" everything else
+    width:100%;
+    right:0;
+    top:0;
+    background: #20272E;
+    height:100vh; // viewportHeight height of the device you are using
+    transition: all .5s ease-in-out;
+    
+    .mobile-nav-both-sections{
+        padding: 8em;
+    }
+    img {
+        padding: 1em;
+        height:35px;
+        width:auto;
+    }
+    li {
+
+        a {
+            color:white;
+            text-decoration: none;
+            display:block;
+            padding: .5em;
+            font-size: 2em;
+            text-align:center;
+
+            &:hover {
+                font-weight:bold;
+            }
+        }
+        .light-dark-button{
+            all: initial; 
+           * {
+                all:unset;
+            }
+            color:white;
+            text-decoration: none;
+            padding-top: .5em;
+            font-size: 2em;
+            font-family: "Poppins";
+            width:95%;
+            text-align: center;
+            &:hover {
+                font-weight:bold;
+            }
+        }
+    }
+}
+
+
+.mobile-menu-exit {
+    float:right;
+    margin: .5em;
+    cursor:pointer;
+}
+// removes the dots for every entry in a list
 ul {
     list-style-type: none;
     margin:0;
     padding:0;
 }
 
-section {
+
+// CSS for index site ----------------------------------------------
+.main-section-index {
+    text-align: center;
     padding: 5em 2em;
 }
 
-.hero {
-    text-align: center;
-}
-
-.left-col {
+.left-col-index {
 
     .subhead {
         text-transform: uppercase;
@@ -86,232 +157,383 @@ section {
     }
 }
 
-.hero-img {
+.main-section-img {
     width:70%;
     margin-top:3em;
 }
 
-section.features-section {
-    background: #120d38;
+// CSS for agent site ----------------------------------------------
+
+.main-section-index {
+    text-align: center;
+    
+    .heading-agent {
+        font-size: 250%;
+    }
+    .heading-span-agent {
+        color:rgb(94, 94, 94);
+        font-size:70%;
+    }
+    
+    .game-start-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 200%;
+        color: white;
+        border-radius: 1em;
+        font-family: "Poppins";
+        font-weight: bold;
+        padding: 1em 2em 1em 2em;
+        cursor: pointer;
+    }
+    .heading-2-agent {
+
+    }
+    li {
+        padding: 1em;
+    }
+}
+// CSS for orte-optionen site ----------------------------------------------
+
+.main-section-orte {
+    text-align: center;
+
+    padding: 1em .5em;
+
+
+    p {
+        font-size: 3em;
+        font-weight:bold;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+#alleSwitch {
+
+    td, tr {
+        text-align: center;
+        width: 100%;
+        color: white; 
+        padding: 5px 0px; 
+    }
+
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
     color: white;
 }
 
-ul.features-list {
-    margin: 0;
-    padding-left:.1em;
-    display:grid;
 
-    li {
-        font-size: 1.1em;
-        margin-bottom:1em;
-        margin-left:2em;
-        position:relative;
+#customTd {
+    border: 0.1px solid black;
+    width: 100%; 
+    padding: 0; 
+}
+#customTabelle{
+    border: 0.1px solid black;
+    border-collapse: collapse;
+    width: 100%; 
+}
 
-        &:before {
-            content: "";
-            left:-2em;
-            position:absolute;
-            width: 20px;
-            height:20px;
-            background-image:url("../images/bullet.svg");
-            background-size:contain;
-            margin-right:.5em;
+.alleSwitchLabel {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* The slider */
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-round:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider-round {
+  background-color: #2196F3;
+}
+
+input:focus + .slider-round {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider-round:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-round {
+  border-radius: 34px;
+}
+
+.slider-round:before {
+  border-radius: 50%;
+}
+// CSS for agent-option site ----------------------------------------------
+
+
+.main-section-options {
+    text-align: center;
+    padding: 1em .5em;
+
+    .form-agent-options{
+    
+        ul {
+            li {
+                .heading-player-amount, .heading-time-amount {
+                    margin:0;
+                }
+            }
         }
+    }
+    .spieler-anzahl-schrift {
+        font-size: 80%;
+    }
+    li {
+        padding: 1em;
+        background-color:#f5f5f5;
+        border-radius: 1em;
+        margin: .5em 1em;
+        padding: .5em;
+
+        .heading-options .heading-player-amount .heading-time-amount{
+            margin:0;
+        }
+    }
+  
+   
+    p {
+        font-size: 3em;
+        font-weight:bold;
+        padding: .3em;
+        margin:0;
+    }
+    h1 {
+        font-size: 200%;
+        span {
+            font-size: 60%;
+        }
+    }
+    .slider {
+        width: 50%;
     }
 }
 
-.features-section img {
+#heading-options{
+    font-size: 280%;
+    color: #a00000;
+    font-weight: bold;
+    margin:.3em;
+}
+
+.button-agent-options {
+    color: white;
+    border-radius: 1em;
+    font-family: "Poppins";
+    padding: 1em 2em 1em 2em;
+    cursor: pointer;
+    background-color: rgb(2, 2, 133);
+    font-size: 200%; 
+    font-weight: bold;
+    margin-top:.3em;
+}
+
+// CSS for agent-start site ----------------------------------------------
+
+.main-section-agent-start {
+    text-align: center;
+    padding: 1em .5em;
+
+
+    p {
+        font-size: 3em;
+        font-weight:bold;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#game-instructions {
+    color: rgb(160, 0, 0);
+    font-size: 200%;
+
+}
+
+.main-part-agent-start {
+    text-align: center;
+    padding: .5em 1em;
+    button {
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        padding: 1em 1.5em 1em 1.5em;
+        cursor: pointer;
+    }
+    .bestätigen-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+    }
+}
+
+.game-info-fields {
+    
+    li {
+        padding: 2em;
+    
+    }
+    ul {
+        text-align: left;
+        font-size: 150%;
+        font-weight: bold;
+    }   
+
+    li {
+        background:rgb(233, 233, 233);
+        border-style: solid;
+        border-radius: 1em;
+        margin-bottom: 1em;
+    }
+    button {
+        color: white;
+        border-radius: 1em;
+        font-style: normal;
+        cursor: pointer;
+    }
+    .weiter-button {
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+        font-family: "Poppins";
+        font-weight: bold;
+    }
+}
+
+.hidden {
     display:none;
 }
 
-.testimonails-section  {
-    background: var(--primary-color);
-    color: white;
+.button-section-agent-start{
+    text-align: center;
+    padding: 2em;
 
-    li {
-        background: #006BD6;
-        text-align:center;
-        padding: 2em 1em;
-        width: 80%;
-        margin: 0 auto 5em auto;
+    .play-again-button{
+        color: white;
         border-radius: 1em;
-
-        img {
-            width:5em;
-            height:5em;
-            border: 5x solid #006BD6;
-            border-radius:50%;
-            margin-top: -4.5em;
-        }
+        font-style: normal;
+        padding: .5em 1em .5em 1em;
+        cursor: pointer;
+        background-color: rgb(2, 2, 133);
+        font-size: 300%;
+    }
+    .start-button{
+        background-color: rgb(31, 31, 31);
+        color: red;
+        border-radius: 1em;
+        font-size: 300%;
+        padding: 1em 2em 1em 2em;
+        font-family: "Poppins";
+        font-weight: bold;
+        cursor: pointer;
     }
 }
 
-h2 {
-    font-size: 2em;
-}
-
-label {
-    display:block;
-    font-size:1.2em;
-    margin-bottom: .5em;
-}
-
-input, textarea {
-    width:100%;
-    padding: .8em;
-    margin-bottom: 1em;
-    border-radius: .3em;
-    border: 1px solid gray;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight:bold;
-    font-size: 1.3em;
-    border:none;
-    margin-bottom:5em;
-    border-radius: 5em;
-    display: inline-block;
-    padding: .8em 2em;
-    width: unset;
-    cursor: pointer;
-}
-
-iframe {
-    width:100%;
-    height:300px;
-}
-
-nav.menu-btn {
-    display:block;
-}
-.custom-darkmode {
-    filter: invert(99%) sepia(57%) saturate(1445%) hue-rotate(330deg) brightness(94%) contrast(95%);
-}
-nav {
-    position:fixed; //even when scrolling stays at the position
-    z-index:999; // stays on the highest layer, "above" everything else
-    width:66%;
-    right:0;
-    top:0;
-    background: #20272E;
-    height:100vh; // viewportHeight height of the device you are using
-    padding: 1em;
-    
-    ul.primary-nav {
-        margin-top: 5em;
-    }
-
-
-    li {
-
-        a {
-            color:white;
-            text-decoration: none;
-            display:block;
-            padding: .5em;
-            font-size: 1.3em;
-            text-align:right;
-
-            &:hover {
-                font-weight:bold;
-            }
-        }
-        .light-dark-button{
-            all: initial; 
-           * {
-                all:unset;
-            }
-            color:white;
-            text-decoration: none;
-            display:block;
-            padding: .5em;
-            font-size: 1.3em;
-            font-family: "Poppins";
-            width:95%;
-            text-align: right;
-            &:hover {
-                font-weight:bold;
-            }
-        }
-        // button{
-        //     color:white;
-        //     background: #20272E;
-        //     border:none;
-        //     text-decoration: none;
-        //     display:block;
-        //     padding: .5em;
-        //     font-size: 1.3em;
-        //     text-align:right;
-        //     font-family: "Poppins";
-        //     text-align:right;
-        //     width:100%;
-        //     right:0;
-        //     background: #20272E;
-        //     padding:none;
-        //     padding-right: 1em;
-        //     &:hover {
-        //         font-weight:bold;
-        //     }
-        
-        // }
+.countDown{
+    #demo {
+        color:red;
+        font-family: 'Courier New', Courier, monospace;
+        margin: .5em 0em;
+        text-align: center;
+        font-size: 5em;
     }
 }
 
-.mobile-menu-exit {
-    float:right;
-    margin: .5em;
-    cursor:pointer;
-}
-
-// ab 768px (Tablet size)
+// ab 768px (Tablet size) --------------------------------
 @media only screen and (min-width: 768px) {
 
-    
-    .light-dark-button{
-        font-family: "Poppins";
-        background: #ffffff;
-        font-size: 1em;
-        cursor: pointer;
-        background:none;
-        border:none;
-        &:hover {
-            font-weight:bold;
-        }
+    .main-section-agent-start{
+        padding:2em;
     }
+    nav.hide-mobile-nav{
+        transform:translateX(0%);
+    }
+
     .mobile-menu, .mobile-menu-exit{
         display:none;
     }
 
-    .navbar .container {
+    .navbar .container-nav {
         display:grid;
         grid-template-columns: 180px auto;
         
-
+        .mobile-nav-both-sections{
+            padding: 0em;
+        }
     }
 
     .navbar nav {
+    font-size: 130%;
     display:flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     background:none;
     position:unset;
     height:auto;
     width: 100%;
     padding:0;
 
+    .light-dark-button{
+        all: initial; 
+       * {
+            all:unset;
+        }
+        color:black;
+        text-decoration: none;
+        display:flex;
+        font-size: 110%;
+        font-family: "Poppins";
+        &:hover {
+            font-weight:bold;
+        }
+    }
+
         ul {
         display:flex; 
-        }
+    }
     
-        a {
-            color:black;
-            padding: .1em 1em;
-            font-size: 1em;
-        }
-
-        ul.primary-nav {
+    a {
+        color:black;
+        padding: .1em 1em;
+        font-size: 1em;
+    }
+    
+    ul.primary-nav {
             margin:0;
         }
 
@@ -324,41 +546,40 @@ nav {
     }
 }
 
-// PC size
+// PC size --------------------------------
 @media only screen and (min-width: 1080px) {
 
-    .light-dark-button{
-        font-family: "Poppins";
-        background: #ffffff;
-        font-size: 1em;
-        cursor: pointer;
-        background:none;
-        border:none;
-        &:hover {
-            font-weight:bold;
-        }
+    .main-section-agent-start{
+        padding:2em;
+    }
+    nav.hide-mobile-nav{
+        transform:translateX(0%);
     }
     .navbar {
 
         .logo {
-            font-size: 130%;
+            font-size: 160%;
         }
     }
-    .container {
+    .container-nav {
         width: 1080px;
         margin: 0 auto;
+
+        .mobile-nav-both-sections{
+            padding: 0em;
+        }
     }
 
     section {
         padding: 10em 4em;
     }
 
-    .hero .container {
+    .main-section-index .container-nav {
         display: flex;
         justify-content:space-between;
         text-align: left;
 
-        .left-col {
+        .left-col-index {
             margin: 3em 3em 0 5em;
 
             h1 {
@@ -374,11 +595,3 @@ nav {
     }
 }
 
-footer{
-
-   background-color: var(--primary-color);
-    
-   p {
-       color: var(--primary-color);
-   }
-}

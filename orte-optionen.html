@@ -9,6 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
         <script type="text/javascript" src="js/smooth-loading.js"></script>
+        <script type="text/javascript" src="js/orte-optionen.js"></script>
     </head>
     <body>
         <div id="nav-placeholder"></div>
@@ -16,33 +17,22 @@
             <div id="all-except-nav">
                 <section class="main-section-orte" id="all-except-nav">
                     <h1 class="heading-orte">Orte Ein & Ausstellen</h1>
-                    <div class="agent-buttons">
-                        <table>
-                            <tr>
-                              <th>Name</th>
-                              <th>An / Aus</th>
-                            </tr>
-                            <tr>
-                              <td>Kino</td>
-                              <td>      
-                                <label class="switch">
-                                 <input type="checkbox">
-                                 <span class="slider round"></span>
-                                </label>
-                              </td>
-                            </tr>
-                            <tr>
-     
-                              <td>Dschungel</td>
-                              <td>                                
-                                <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                                 </label>
-                            </td>
-                            </tr>
-                          </table>
-                    </div>
+                    
+                        <table id= "alleSwitch">
+
+                            <tbody id="tabellenBody" >
+                                <td>Kino</td>
+                                <td id="alleButton">      
+
+                                </td>
+                              </tr>
+                              <tr>
+
+                              </tr>
+                            </tbody>
+                          </table> 
+                          <div id="tabelle"></div>
+                    
                 </section>
             </div>
     </body>
