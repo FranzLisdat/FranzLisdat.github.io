@@ -176,17 +176,130 @@ ul {
 
 .main-section-index .game-start-button {
   background-color: #020285;
-  font-size: 200%;
+  font-size: 300%;
   color: white;
-  border-radius: 1em;
+  border-radius: .8em;
   font-family: "Poppins";
   font-weight: bold;
-  padding: 1em 2em 1em 2em;
+  padding: .5em 1em .5em 1em;
+  cursor: pointer;
+}
+
+.main-section-index .orte-option-button {
+  background-color: #020285;
+  font-size: 110%;
+  color: white;
+  border-radius: 0.5em;
+  font-family: "Poppins";
+  font-weight: bold;
+  padding: 1em 1em 1em 1em;
   cursor: pointer;
 }
 
 .main-section-index li {
   padding: 1em;
+}
+
+.main-section-orte {
+  text-align: center;
+  padding: 1em .5em;
+}
+
+.main-section-orte p {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.main-section-orte h3 {
+  margin: 0;
+}
+
+#alleSwitch {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+}
+
+#alleSwitch td, #alleSwitch tr {
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 5px 0px;
+}
+
+#customTd {
+  border: 0.1px solid black;
+  width: 100%;
+  padding: 0;
+}
+
+#customTabelle {
+  border: 0.1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.alleSwitchLabel {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* The slider */
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-round:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider-round {
+  background-color: #2196F3;
+}
+
+input:focus + .slider-round {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider-round:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-round {
+  border-radius: 34px;
+}
+
+.slider-round:before {
+  border-radius: 50%;
 }
 
 .main-section-options {
@@ -196,6 +309,18 @@ ul {
 
 .main-section-options .form-agent-options ul li .heading-player-amount, .main-section-options .form-agent-options ul li .heading-time-amount {
   margin: 0;
+}
+
+.main-section-options .form-agent-options ul li .heading-orte-anzahl {
+  font-size: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.main-section-options .form-agent-options ul li #orte-anzahlId {
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
 }
 
 .main-section-options .spieler-anzahl-schrift {
