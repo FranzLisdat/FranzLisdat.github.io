@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
     document.getElementById("start-timer-button").onclick = startFunktion;
     document.getElementById("weiter-button").onclick = weiterFunktion;
     var anweisung = "Kann Losgehen!";
@@ -11,6 +12,11 @@ $(document).ready(function(){
     var personen = [];
     var rollenText = "";
     var verbleibeneSpieler = 0;
+    var alleOrteListe = [];
+    var eingestellteOrte = [];
+    var jsonData = null;
+
+
 
     document.getElementById("game-instructions").innerHTML = anweisung;
     document.getElementById("weiter-button").innerHTML = weiterButtonText;
@@ -24,9 +30,30 @@ $(document).ready(function(){
     }
 
     $.getJSON('json/datenbank.json', function(data) {
-        var randomNumber = Math.floor(Math.random() * data.ort.length);
-        spielOrtString = Object.keys(data.ort[randomNumber]);
-        personen = data["ort"][randomNumber][spielOrtString];
+        jsonData = data;
+
+        // Falls keine Orte eingestellt wurden, soll er alle nehmen
+        // Falls der User mind. 1x auf den Orte einstellungen war, und alle ausgestellt hat dann ERROR message
+
+        try {
+            for (var i = 0; i < jsonData.ort.length;i++){
+                alleOrteListe.push(Object.keys(jsonData.ort[i]));
+                    if (localStorage.getItem("allOn") === null) {
+                        eingestellteOrte = alleOrteListe;        
+                    } else if (localStorage.getItem(alleOrteListe[i]) == "true") {
+                        eingestellteOrte.push(alleOrteListe[i]);
+                    } 
+                }
+        } catch (e) {
+            window.alert("ALLE ORTE SIND AUSGESTELLT! Bitte geh zurück und stell mind. 1 ein");
+        }
+ 
+ 
+        var randomNumber = Math.floor(Math.random() * eingestellteOrte.length);
+        spielOrtString = eingestellteOrte[randomNumber];  
+        var index = alleOrteListe.indexOf(spielOrtString);
+        personen = jsonData["ort"][index][spielOrtString];
+        console.log(jsonData["ort"].length);
         shuffle(personen.person);
         personen.person.splice(0,13-Spieleranzahl);
         personen.person.push({id:12,bezeichnung:"Agent"});

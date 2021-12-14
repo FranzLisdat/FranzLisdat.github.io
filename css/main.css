@@ -176,12 +176,23 @@ ul {
 
 .main-section-index .game-start-button {
   background-color: #020285;
-  font-size: 200%;
+  font-size: 300%;
   color: white;
-  border-radius: 1em;
+  border-radius: .8em;
   font-family: "Poppins";
   font-weight: bold;
-  padding: 1em 2em 1em 2em;
+  padding: .5em 1em .5em 1em;
+  cursor: pointer;
+}
+
+.main-section-index .orte-option-button {
+  background-color: #020285;
+  font-size: 110%;
+  color: white;
+  border-radius: 0.5em;
+  font-family: "Poppins";
+  font-weight: bold;
+  padding: 1em 1em 1em 1em;
   cursor: pointer;
 }
 
@@ -298,6 +309,18 @@ input:checked + .slider-round:before {
 
 .main-section-options .form-agent-options ul li .heading-player-amount, .main-section-options .form-agent-options ul li .heading-time-amount {
   margin: 0;
+}
+
+.main-section-options .form-agent-options ul li .heading-orte-anzahl {
+  font-size: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.main-section-options .form-agent-options ul li #orte-anzahlId {
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
 }
 
 .main-section-options .spieler-anzahl-schrift {
